@@ -1,0 +1,5 @@
+#!/usr/bin/env ruby
+require 'retreval/runner'
+
+runner = Retreval::Runner.new(ARGV)
+runner.run

@@ -37,14 +37,20 @@ module Retreval
     # ... and so on.
     def load_from_yaml_file(file)
       begin
+        
         ydoc = YAML.load(File.open(file, "r"))
+        
         ydoc.each do |entry|
           query = entry["query"]          # => the query string
           ranked = entry["ranked"]        # => a boolean flag if ranked or not
           documents = entry["documents"]  # => an array of documents
           
           # Determine whether this will be a ranked or unranked result set
-          resultset = ranked ? RankedQueryResult.new : UnrankedQueryResult.new
+          if ranked
+            resultset = RankedQueryResult.new :query => query, :gold_standard => @gold_standard
+          else
+            resultset = UnrankedQueryResult.new :query => query, :gold_standard => @gold_standard
+          end
           
           # Find all documents for this query result
           documents.each do |document_element|
@@ -56,8 +62,8 @@ module Retreval
           @query_results << resultset
           
         end
-      rescue Exception => e
-        raise "Error while parsing the YAML document: " + e.message
+      #rescue Exception => e
+      #  raise "Error while parsing the YAML document: " + e.message
       end
     end
     
@@ -447,7 +453,7 @@ module Retreval
       statistics unless @calculated
             
       # Use the results to print a table
-      print "Query: #{@query}\n"
+      print "Query: #{@query.querystring}\n"
       print "Index\tRelevant\tPrecision\tRecall\tScore\t\tDocument ID\n"
       @results.each_with_index do |row, index|
         precision = "%.3f" % row[:precision]

@@ -1,0 +1,23 @@
+- query: Example Query
+  ranked: true
+  documents:
+  -   score: 0.24921744
+      id: ict21307
+  -   score: 0.1623808
+      id: ict21309
+  -   score: 0.13997056
+      id: ict21311
+  -   score: 0.12525019
+      id: ict21313
+  -   score: 0.11482056
+      id: ict21315
+  -   score: 0.1131133
+      id: ict21317
+  -   score: 0.09897413
+      id: ict21319
+  -   score: 0.09897413
+      id: ict21321
+  -   score: 0.09742848
+      id: ict21323
+  -   score: 0.09742848
+      id: ict21325

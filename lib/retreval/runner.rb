@@ -50,6 +50,7 @@ module Retreval
         @query_result_set = QueryResultSet.new :gold_standard => @gold_standard
         case @options.format
         when "yaml"
+          @query_result_set.load_from_yaml_file @options.query_result_set_file
         when "plain"
           @query_result_set.load_from_yaml_file @options.query_result_set_file
         else
@@ -88,7 +89,7 @@ module Retreval
       end
       
       print "Finished calculating all results. Exiting.\n" if $verbose
-      print "The mean average precision was #{@query_result_set.mean_average_precision}" if $verbose
+      print "The mean average precision was #{@query_result_set.mean_average_precision}\n" if $verbose
       exit
       
     end

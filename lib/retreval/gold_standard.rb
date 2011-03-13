@@ -54,7 +54,7 @@ module Retreval
       begin
         ydoc = YAML.load(File.open(file, "r"))
         ydoc.each do |entry|
-
+          
           # The query is first in the hierarchy
           query = entry["query"]
 

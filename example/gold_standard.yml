@@ -1,0 +1,48 @@
+- query: Example Query
+  documents: 
+  - id: ict21307
+    judgements:
+    - relevant: true
+      user: Bob
+  - id: ict21309
+    judgements:
+    - relevant: false
+      user: Bob
+  - id: ict21311
+    judgements:
+    - relevant: false
+      user: Bob
+  - id: ict21313
+    judgements: 
+    - relevant: false
+      user: Bob
+  - id: ict21315
+    judgements:
+    - relevant: true
+      user: Bob
+    - relevant: true
+      user: John
+  - id: ict21317
+    judgements: 
+    - relevant: false
+      user: Bob
+    - relevant: false
+      user: John
+  - id: ict21319
+    judgements: 
+    - relevant: false
+      user: Bob
+    - relevant: false
+      user: John
+  - id: ict21321
+    judgements: 
+    - relevant: false
+      user: John
+  - id: ict21323
+    judgements: 
+    - relevant: true
+      user: John
+  - id: ict21325
+    judgements: 
+    - relevant: true
+      user: John

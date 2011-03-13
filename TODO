@@ -1,6 +1,5 @@
 TODO
 ====
 
-- Test cases
-- Find a better name
+- Find a suitable plaintext format for retrieval results
 - Use Hashes instead of Arrays to store classes

@@ -64,7 +64,7 @@ Where you have to define the following options:
 
 - `gold-standard-file` is a file in a specified format that includes all the judgements
 - `query-results` is a file in a specified format that includes all the query results in a single file
-- ˚format` is the format that the files will use (either "yaml" or "plain")
+- `format` is the format that the files will use (either "yaml" or "plain")
 - `output-prefix` is the prefix of output files that will be created
 
 Formats

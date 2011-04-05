@@ -1,6 +1,6 @@
 require 'test/unit'
-require 'retrievalAPI/gold_standard'
-require 'retrievalAPI/query_result'
+require 'retreval/gold_standard'
+require 'retreval/query_result'
 
 # Some basic unit tests for QueryResult
 # Unranked results include 4 documents of 10, which are all retrieved.

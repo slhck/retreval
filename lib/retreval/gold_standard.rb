@@ -17,7 +17,7 @@ module Retreval
     # Called via:
     #     GoldStandard.new :triples => an_array_of_triples
     def initialize(args = {})
-      @documents = Array.new
+      @documents = Hash.new
       @queries = Array.new
       @judgements = Array.new
       @users = Hash.new
@@ -73,7 +73,6 @@ module Retreval
                 user = judgement["user"]
                 
                 add_judgement :document => document, :query => query, :relevant => relevant, :user => user
-                
               end
             end
             
@@ -138,7 +137,7 @@ module Retreval
         # If there is no judgement for this combination, just add the document/query pair
         if relevant.nil?
           # TODO: improve efficiency by introducing hashes !
-          @documents << document unless @documents.include?(document)
+          @documents[document_id] = document
           @queries << query unless @queries.include?(query)
           return
         end
@@ -152,7 +151,7 @@ module Retreval
           @users[user_id] = user
         end
         
-        @documents << document unless @documents.include?(document)
+        @documents[document_id] = document
         @queries << query unless @queries.include?(query)
         @judgements << judgement
       else
@@ -213,8 +212,7 @@ module Retreval
     #     contains_document? :id => "document ID"
     def contains_document?(args)
       document_id = args[:id]
-      document = Document.new :id => document_id
-      @documents.include? document
+      @documents.key? document_id
     end
     
     

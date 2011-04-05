@@ -83,8 +83,8 @@ module Retreval
           write_to_yaml_file :data => @statistics, :filename => "statistics.yml"
           write_to_yaml_file :data => @average_precision, :filename => "avg_precision.yml"
           
-        rescue Exception => e
-          raise "Error while calculating results: #{e}"
+        # rescue Exception => e
+        #  raise "Error while calculating results: #{e}"
         end
       end
       

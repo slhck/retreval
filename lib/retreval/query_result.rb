@@ -62,8 +62,8 @@ module Retreval
           @query_results << resultset
           
         end
-      #rescue Exception => e
-      #  raise "Error while parsing the YAML document: " + e.message
+      rescue Exception => e
+        raise "Error while parsing the YAML document: " + e.message
       end
     end
     
@@ -104,9 +104,9 @@ module Retreval
       raise "Can not create a Query Result without a query string specified" if args[:query].nil?
       
       # get the documents
-      # documents is an array - each document contains a document (from the Class document) with a score
+      # documents is a Hash - each document contains a document (from the Class document) with a score
       # documents can also be omitted from the call and can be added later
-      @documents = Array.new
+      @documents = Hash.new
       args[:documents].each { |document| add_document(document) } unless args[:documents].nil?
       
       # set the gold standard
@@ -153,7 +153,7 @@ module Retreval
       end
       
       doc = ResultDocument.new :id => document_id, :score => args[:score]
-      @documents << doc
+      @documents[document_id] = doc
     end
     
     
@@ -217,7 +217,7 @@ module Retreval
     # Clean up every ResultDocument from this QueryResult that does not appear to have
     # a Judgement in the GoldStandard.
     def cleanup
-      @documents.keep_if { |document| @gold_standard.contains_judgement? :document => document.id, :query => @query.querystring }
+      @documents.keep_if { |key, document| @gold_standard.contains_judgement? :document => document.id, :query => @query.querystring }
     end
     
     
@@ -230,11 +230,14 @@ module Retreval
       # Use the gold standard we initially received
       standard = @gold_standard
       
+      # If there is an unranked result to be calculated, we will 
       if resultset.nil?
         unranked = true
-        resultset = self
+        resultset = OpenStruct.new
+        resultset.documents = @documents.values
+        resultset.query = @query
       end
-      
+
       begin
         all_items = standard.documents.length               # => all documents this gold standard contains
         retrieved_items = resultset.documents.length        # => all items retrieved for this information need
@@ -246,8 +249,8 @@ module Retreval
         query = resultset.query
       
         # Get the document sets we are working on
-        retrieved_documents = resultset.documents
-        not_retrieved_documents = standard.documents.reject { |doc| retrieved_documents.include? doc }
+        retrieved_documents = resultset.documents           # => This is an Array all the time
+        not_retrieved_documents = standard.documents.reject { |key, doc| retrieved_documents.include? doc } # => This is a Hash
         
         # Check whether each of the retrieved documents is relevant or not ...
         retrieved_documents.each do |doc|
@@ -256,8 +259,8 @@ module Retreval
         end
         retrieved_nonrelevant_items = retrieved_items - retrieved_relevant_items
         
-        # ... do the same for nonretrieved documents
-        not_retrieved_documents.each do |doc|
+        # ... do the same for nonretrieved documents. This is a hash, so we only take the values
+        not_retrieved_documents.values.each do |doc|
           relevant = standard.relevant? :document => doc.id, :query => query.querystring
           not_retrieved_relevant_items += 1 if relevant
         end
@@ -386,7 +389,7 @@ module Retreval
           subset = OpenStruct.new
           subset.documents = Array.new
           subset.query = @query
-          @documents.each_with_index do |doc, index|
+          @documents.values.each_with_index do |doc, index|
             # Only get the subset of documents
             subset.documents << doc
             break if index == i - 1
@@ -413,7 +416,7 @@ module Retreval
         # Calculate the results first if we haven't done this before
         statistics unless @calculated
         
-        total_relevant_documents = @gold_standard.documents.count { |doc| @gold_standard.relevant? :document => doc.id, :query => @query.querystring  }
+        total_relevant_documents = @gold_standard.documents.values.count { |doc| @gold_standard.relevant? :document => doc.id, :query => @query.querystring  }
         
         if total_relevant_documents > 0
           # The sum is calculated by adding the precision for a relevant document, or 0 for a nonrelevant document
@@ -457,10 +460,10 @@ module Retreval
       print "Index\tRelevant\tPrecision\tRecall\tScore\t\tDocument ID\n"
       @results.each_with_index do |row, index|
         precision = "%.3f" % row[:precision]
-        document = @documents[index].id
+        document = @documents.values[index].id
         recall = "%.3f" %  row[:recall]
         relevant = row[:relevant] ? "[X]" : "[ ]"
-        print "#{index+1}\t" + relevant + "\t\t" + precision + "\t\t" + recall + "\t" + @documents[index].score.to_s + "\t" + document + "\n"
+        print "#{index+1}\t" + relevant + "\t\t" + precision + "\t\t" + recall + "\t" + @documents.values[index].score.to_s + "\t" + document + "\n"
       end
       print "\n"
       

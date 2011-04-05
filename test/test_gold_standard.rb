@@ -1,5 +1,5 @@
 require 'test/unit'
-require 'retrievalAPI/gold_standard'
+require 'retreval/gold_standard'
 
 # Some basic unit tests for the GoldStandard
 class TestGoldStandard < Test::Unit::TestCase 

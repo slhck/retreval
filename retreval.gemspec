@@ -1,7 +1,7 @@
 Gem::Specification.new do |s| 
   s.name	= "retreval" 
   s.summary	= "A Ruby API for Evaluating Retrieval Results" 
-  s.description = File.read(File.join(File.dirname(__FILE__), 'README')) 
+  s.description = File.read(File.join(File.dirname(__FILE__), 'README.md')) 
   # s.requirements = [ 'Nothing special' ]
   s.version = "0.1"
   s.author = "Werner Robitza"

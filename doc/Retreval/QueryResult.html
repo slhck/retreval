@@ -1,0 +1,746 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+	"http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+	<meta content="text/html; charset=utf-8" http-equiv="Content-Type" />
+
+	<title>Class: Retreval::QueryResult</title>
+
+	<link rel="stylesheet" href="../rdoc.css" type="text/css" media="screen" />
+
+	<script src="../js/jquery.js" type="text/javascript"
+		charset="utf-8"></script>
+	<script src="../js/thickbox-compressed.js" type="text/javascript"
+		charset="utf-8"></script>
+	<script src="../js/quicksearch.js" type="text/javascript"
+		charset="utf-8"></script>
+	<script src="../js/darkfish.js" type="text/javascript"
+		charset="utf-8"></script>
+
+</head>
+<body class="class">
+
+	<div id="metadata">
+		<div id="home-metadata">
+			<div id="home-section" class="section">
+        <h3 class="section-header">
+          <a href="../index.html">Home</a>
+          <a href="../index.html#classes">Classes</a>
+          <a href="../index.html#methods">Methods</a>
+        </h3>
+			</div>
+		</div>
+
+		<div id="file-metadata">
+			<div id="file-list-section" class="section">
+				<h3 class="section-header">In Files</h3>
+				<div class="section-body">
+					<ul>
+					
+						<li><a href="../lib/retreval/query_result_rb.html?TB_iframe=true&amp;height=550&amp;width=785"
+							class="thickbox" title="lib/retreval/query_result.rb">lib/retreval/query_result.rb</a></li>
+					
+					</ul>
+				</div>
+			</div>
+
+			
+		</div>
+
+		<div id="class-metadata">
+
+			<!-- Parent Class -->
+			
+			<div id="parent-class-section" class="section">
+				<h3 class="section-header">Parent</h3>
+				
+				<p class="link">Object</p>
+				
+			</div>
+			
+
+			<!-- Namespace Contents -->
+			
+
+			<!-- Method Quickref -->
+			
+			<div id="method-list-section" class="section">
+				<h3 class="section-header">Methods</h3>
+				<ul class="link-list">
+					
+					<li><a href="#method-c-new">::new</a></li>
+					
+					<li><a href="#method-i-%3C%3C">#<<</a></li>
+					
+					<li><a href="#method-i-add_document">#add_document</a></li>
+					
+					<li><a href="#method-i-calculate">#calculate</a></li>
+					
+					<li><a href="#method-i-cleanup">#cleanup</a></li>
+					
+					<li><a href="#method-i-f_measure">#f_measure</a></li>
+					
+					<li><a href="#method-i-load_from_yaml_file">#load_from_yaml_file</a></li>
+					
+					<li><a href="#method-i-print_contingency_table">#print_contingency_table</a></li>
+					
+				</ul>
+			</div>
+			
+
+			<!-- Included Modules -->
+			
+		</div>
+
+		<div id="project-metadata">
+			
+			
+			<div id="fileindex-section" class="section project-section">
+				<h3 class="section-header">Files</h3>
+				<ul>
+				
+					<li class="file"><a href="../CHANGELOG.html">CHANGELOG</a></li>
+				
+					<li class="file"><a href="../TODO.html">TODO</a></li>
+				
+				</ul>
+			</div>
+			
+
+			<div id="classindex-section" class="section project-section">
+				<h3 class="section-header">Class Index
+					<span class="search-toggle"><img src="../images/find.png"
+						height="16" width="16" alt="[+]"
+						title="show/hide quicksearch" /></span></h3>
+				<form action="#" method="get" accept-charset="utf-8" class="initially-hidden">
+				<fieldset>
+					<legend>Quicksearch</legend>
+					<input type="text" name="quicksearch" value=""
+						class="quicksearch-field" />
+				</fieldset>
+				</form>
+
+				<ul class="link-list">
+				
+					<li><a href="../Retreval.html">Retreval</a></li>
+				
+					<li><a href="../Retreval/Document.html">Retreval::Document</a></li>
+				
+					<li><a href="../Retreval/GoldStandard.html">Retreval::GoldStandard</a></li>
+				
+					<li><a href="../Retreval/Judgement.html">Retreval::Judgement</a></li>
+				
+					<li><a href="../Retreval/Options.html">Retreval::Options</a></li>
+				
+					<li><a href="../Retreval/Query.html">Retreval::Query</a></li>
+				
+					<li><a href="../Retreval/QueryResult.html">Retreval::QueryResult</a></li>
+				
+					<li><a href="../Retreval/QueryResultSet.html">Retreval::QueryResultSet</a></li>
+				
+					<li><a href="../Retreval/RankedQueryResult.html">Retreval::RankedQueryResult</a></li>
+				
+					<li><a href="../Retreval/ResultDocument.html">Retreval::ResultDocument</a></li>
+				
+					<li><a href="../Retreval/Runner.html">Retreval::Runner</a></li>
+				
+					<li><a href="../Retreval/UnrankedQueryResult.html">Retreval::UnrankedQueryResult</a></li>
+				
+					<li><a href="../Retreval/User.html">Retreval::User</a></li>
+				
+					<li><a href="../TestGoldStandard.html">TestGoldStandard</a></li>
+				
+					<li><a href="../TestQueryResult.html">TestQueryResult</a></li>
+				
+				</ul>
+				<div id="no-class-search-results" style="display: none;">No matching classes.</div>
+			</div>
+
+			
+		</div>
+	</div>
+
+	<div id="documentation">
+		<h1 class="class">Retreval::QueryResult</h1>
+
+		<div id="description">
+			<p>
+A <a href="QueryResult.html">QueryResult</a> contains a list of results for
+a given query. It can either be ranked or unranked. You can&#8217;t
+instantiate such a class - use the subclasses <a
+href="RankedQueryResult.html">RankedQueryResult</a> and <a
+href="UnrankedQueryResult.html">UnrankedQueryResult</a> instead.
+</p>
+
+		</div>
+
+		<!-- Constants -->
+		
+
+		<!-- Attributes -->
+		
+		<div id="attribute-method-details" class="method-section section">
+			<h3 class="section-header">Attributes</h3>
+
+			
+			<div id="query-attribute-method" class="method-detail">
+				<a name="query"></a>
+				
+				<div class="method-heading attribute-method-heading">
+					<span class="method-name">query</span><span
+						class="attribute-access-type">[R]</span>
+				</div>
+
+				<div class="method-description">
+				
+				
+				
+				</div>
+			</div>
+			
+			<div id="documents-attribute-method" class="method-detail">
+				<a name="documents"></a>
+				
+				<div class="method-heading attribute-method-heading">
+					<span class="method-name">documents</span><span
+						class="attribute-access-type">[R]</span>
+				</div>
+
+				<div class="method-description">
+				
+				
+				
+				</div>
+			</div>
+			
+			<div id="gold-standard-attribute-method" class="method-detail">
+				<a name="gold_standard"></a>
+				
+				<a name="gold_standard="></a>
+				
+				<div class="method-heading attribute-method-heading">
+					<span class="method-name">gold_standard</span><span
+						class="attribute-access-type">[RW]</span>
+				</div>
+
+				<div class="method-description">
+				
+				
+				
+				</div>
+			</div>
+			
+		</div>
+		
+
+		<!-- Methods -->
+		
+		<div id="public-class-method-details" class="method-section section">
+			<h3 class="section-header">Public Class Methods</h3>
+
+		
+			<div id="new-method" class="method-detail ">
+				<a name="method-c-new"></a>
+
+				<div class="method-heading">
+				
+					<span class="method-name">new</span><span
+						class="method-args">(args)</span>
+					<span class="method-click-advice">click to toggle source</span>
+				
+				</div>
+
+				<div class="method-description">
+					
+					<p>
+Creates a new <a href="QueryResult.html">QueryResult</a> with a specified
+query string and an optional array of documents. This class is abstract, so
+you have to create an <a
+href="UnrankedQueryResult.html">UnrankedQueryResult</a> or a <a
+href="RankedQueryResult.html">RankedQueryResult</a> instead
+</p>
+					
+
+					
+					<div class="method-source-code"
+						id="new-source">
+<pre>
+     <span class="ruby-comment cmt"># File lib/retreval/query_result.rb, line 96</span>
+ 96:     <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">initialize</span>(<span class="ruby-identifier">args</span>)
+ 97:       
+ 98:       <span class="ruby-keyword kw">if</span> <span class="ruby-keyword kw">self</span>.<span class="ruby-identifier">class</span> <span class="ruby-operator">==</span> <span class="ruby-constant">QueryResult</span>
+ 99:         <span class="ruby-identifier">raise</span> <span class="ruby-value str">&quot;Can not instantiate a QueryResult. Use a RankedQueryResult or UnrankedQueryResult instead.&quot;</span>
+100:       <span class="ruby-keyword kw">end</span>
+101:       
+102:       <span class="ruby-comment cmt"># Get the string of the query</span>
+103:       <span class="ruby-ivar">@query</span> = <span class="ruby-constant">Query</span>.<span class="ruby-identifier">new</span> <span class="ruby-value">:querystring</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-identifier">args</span>[<span class="ruby-value">:query</span>]
+104:       <span class="ruby-identifier">raise</span> <span class="ruby-value str">&quot;Can not create a Query Result without a query string specified&quot;</span> <span class="ruby-keyword kw">if</span> <span class="ruby-identifier">args</span>[<span class="ruby-value">:query</span>].<span class="ruby-identifier">nil?</span>
+105:       
+106:       <span class="ruby-comment cmt"># get the documents</span>
+107:       <span class="ruby-comment cmt"># documents is a Hash - each document contains a document (from the Class document) with a score</span>
+108:       <span class="ruby-comment cmt"># documents can also be omitted from the call and can be added later</span>
+109:       <span class="ruby-ivar">@documents</span> = <span class="ruby-constant">Hash</span>.<span class="ruby-identifier">new</span>
+110:       <span class="ruby-identifier">args</span>[<span class="ruby-value">:documents</span>].<span class="ruby-identifier">each</span> { <span class="ruby-operator">|</span><span class="ruby-identifier">document</span><span class="ruby-operator">|</span> <span class="ruby-identifier">add_document</span>(<span class="ruby-identifier">document</span>) } <span class="ruby-keyword kw">unless</span> <span class="ruby-identifier">args</span>[<span class="ruby-value">:documents</span>].<span class="ruby-identifier">nil?</span>
+111:       
+112:       <span class="ruby-comment cmt"># set the gold standard</span>
+113:       <span class="ruby-ivar">@gold_standard</span> = <span class="ruby-identifier">args</span>[<span class="ruby-value">:gold_standard</span>]
+114:       <span class="ruby-identifier">raise</span> <span class="ruby-value str">&quot;Can not create a Query Result without a gold standard that it belongs to&quot;</span> <span class="ruby-keyword kw">if</span> <span class="ruby-identifier">args</span>[<span class="ruby-value">:gold_standard</span>].<span class="ruby-identifier">nil?</span>
+115:       
+116:     <span class="ruby-keyword kw">end</span></pre>
+					</div>
+					
+				</div>
+
+				
+
+				
+			</div>
+
+		
+		</div>
+	
+		<div id="public-instance-method-details" class="method-section section">
+			<h3 class="section-header">Public Instance Methods</h3>
+
+		
+			<div id="--method" class="method-detail ">
+				<a name="method-i-%3C%3C"></a>
+
+				<div class="method-heading">
+				
+					<span class="method-name">&lt;&lt;</span><span
+						class="method-args">(args)</span>
+					<span class="method-click-advice">click to toggle source</span>
+				
+				</div>
+
+				<div class="method-description">
+					
+					<p>
+This is essentially the same as <a
+href="QueryResult.html#method-i-add_document">add_document</a>
+</p>
+					
+
+					
+					<div class="method-source-code"
+						id="--source">
+<pre>
+     <span class="ruby-comment cmt"># File lib/retreval/query_result.rb, line 161</span>
+161:     <span class="ruby-keyword kw">def</span> <span class="ruby-operator">&lt;&lt;</span>(<span class="ruby-identifier">args</span>)
+162:       <span class="ruby-identifier">add_document</span> <span class="ruby-identifier">args</span>
+163:     <span class="ruby-keyword kw">end</span></pre>
+					</div>
+					
+				</div>
+
+				
+
+				
+			</div>
+
+		
+			<div id="add-document-method" class="method-detail ">
+				<a name="method-i-add_document"></a>
+
+				<div class="method-heading">
+				
+					<span class="method-name">add_document</span><span
+						class="method-args">(args)</span>
+					<span class="method-click-advice">click to toggle source</span>
+				
+				</div>
+
+				<div class="method-description">
+					
+					<p>
+Adds a single <a href="ResultDocument.html">ResultDocument</a> to the
+result Call this with:
+</p>
+<pre>
+    add_document :document =&gt; &quot;test_document&quot;, :score =&gt; 13
+</pre>
+<p>
+Alternatively:
+</p>
+<pre>
+    add_document :id =&gt; &quot;test_document&quot;, :score =&gt; 13</pre>
+					
+
+					
+					<div class="method-source-code"
+						id="add-document-source">
+<pre>
+     <span class="ruby-comment cmt"># File lib/retreval/query_result.rb, line 145</span>
+145:     <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">add_document</span>(<span class="ruby-identifier">args</span>)
+146:       <span class="ruby-identifier">document_id</span> = <span class="ruby-identifier">args</span>[<span class="ruby-value">:document</span>]
+147:       <span class="ruby-keyword kw">if</span> <span class="ruby-identifier">document_id</span>.<span class="ruby-identifier">nil?</span>
+148:         <span class="ruby-keyword kw">if</span> <span class="ruby-identifier">args</span>[<span class="ruby-value">:id</span>].<span class="ruby-identifier">nil?</span>
+149:           <span class="ruby-identifier">raise</span> <span class="ruby-value str">&quot;Can not add a new Document to a Query Result without a document identifier&quot;</span>
+150:         <span class="ruby-keyword kw">else</span>
+151:           <span class="ruby-identifier">document_id</span> = <span class="ruby-identifier">args</span>[<span class="ruby-value">:id</span>]
+152:         <span class="ruby-keyword kw">end</span>
+153:       <span class="ruby-keyword kw">end</span>
+154:       
+155:       <span class="ruby-identifier">doc</span> = <span class="ruby-constant">ResultDocument</span>.<span class="ruby-identifier">new</span> <span class="ruby-value">:id</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-identifier">document_id</span>, <span class="ruby-value">:score</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-identifier">args</span>[<span class="ruby-value">:score</span>]
+156:       <span class="ruby-ivar">@documents</span>[<span class="ruby-identifier">document_id</span>] = <span class="ruby-identifier">doc</span>
+157:     <span class="ruby-keyword kw">end</span></pre>
+					</div>
+					
+				</div>
+
+				
+
+				
+			</div>
+
+		
+			<div id="cleanup-method" class="method-detail ">
+				<a name="method-i-cleanup"></a>
+
+				<div class="method-heading">
+				
+					<span class="method-name">cleanup</span><span
+						class="method-args">()</span>
+					<span class="method-click-advice">click to toggle source</span>
+				
+				</div>
+
+				<div class="method-description">
+					
+					<p>
+Clean up every <a href="ResultDocument.html">ResultDocument</a> from this
+<a href="QueryResult.html">QueryResult</a> that does not appear to have a
+<a href="Judgement.html">Judgement</a> in the <a
+href="GoldStandard.html">GoldStandard</a>.
+</p>
+					
+
+					
+					<div class="method-source-code"
+						id="cleanup-source">
+<pre>
+     <span class="ruby-comment cmt"># File lib/retreval/query_result.rb, line 219</span>
+219:     <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">cleanup</span>
+220:       <span class="ruby-ivar">@documents</span>.<span class="ruby-identifier">keep_if</span> { <span class="ruby-operator">|</span><span class="ruby-identifier">key</span>, <span class="ruby-identifier">document</span><span class="ruby-operator">|</span> <span class="ruby-ivar">@gold_standard</span>.<span class="ruby-identifier">contains_judgement?</span> <span class="ruby-value">:document</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-identifier">document</span>.<span class="ruby-identifier">id</span>, <span class="ruby-value">:query</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-ivar">@query</span>.<span class="ruby-identifier">querystring</span> }
+221:     <span class="ruby-keyword kw">end</span></pre>
+					</div>
+					
+				</div>
+
+				
+
+				
+			</div>
+
+		
+			<div id="f-measure-method" class="method-detail ">
+				<a name="method-i-f_measure"></a>
+
+				<div class="method-heading">
+				
+					<span class="method-name">f_measure</span><span
+						class="method-args">(args = {:beta => 1})</span>
+					<span class="method-click-advice">click to toggle source</span>
+				
+				</div>
+
+				<div class="method-description">
+					
+					<p>
+Calculates the F-measure, weighing precision and recall. See: <a
+href="http://nlp.stanford.edu/IR-book/html/htmledition/evaluation-of-unranked-retrieval-sets-1.html">nlp.stanford.edu/IR-book/html/htmledition/evaluation-of-unranked-retrieval-sets-1.html</a>
+</p>
+					
+
+					
+					<div class="method-source-code"
+						id="f-measure-source">
+<pre>
+     <span class="ruby-comment cmt"># File lib/retreval/query_result.rb, line 188</span>
+188:     <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">f_measure</span>(<span class="ruby-identifier">args</span> = {<span class="ruby-value">:beta</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-value">1</span>})
+189:       
+190:       <span class="ruby-comment cmt"># Get intermediate results for both un/ranked results</span>
+191:       <span class="ruby-identifier">results</span> = <span class="ruby-identifier">calculate</span>
+192:       
+193:       <span class="ruby-identifier">precision</span> = <span class="ruby-identifier">results</span>[<span class="ruby-value">:precision</span>]
+194:       <span class="ruby-identifier">recall</span> = <span class="ruby-identifier">results</span>[<span class="ruby-value">:recall</span>]
+195:       
+196:       <span class="ruby-keyword kw">begin</span>
+197:         <span class="ruby-comment cmt"># The user has the option to supply either alpha or beta (or both, doesn't matter)</span>
+198:         <span class="ruby-keyword kw">unless</span> <span class="ruby-identifier">args</span>[<span class="ruby-value">:alpha</span>].<span class="ruby-identifier">nil?</span>
+199:           <span class="ruby-identifier">alpha</span> = <span class="ruby-identifier">args</span>[<span class="ruby-value">:alpha</span>].<span class="ruby-identifier">to_f</span>
+200:           <span class="ruby-identifier">beta_squared</span> = (<span class="ruby-value">1</span> <span class="ruby-operator">-</span> <span class="ruby-identifier">alpha</span>) <span class="ruby-operator">/</span> <span class="ruby-identifier">alpha</span>
+201:         <span class="ruby-keyword kw">end</span>
+202:         
+203:         <span class="ruby-keyword kw">unless</span> <span class="ruby-identifier">args</span>[<span class="ruby-value">:beta</span>].<span class="ruby-identifier">nil?</span>
+204:           <span class="ruby-identifier">beta</span> = <span class="ruby-identifier">args</span>[<span class="ruby-value">:beta</span>].<span class="ruby-identifier">to_f</span>
+205:           <span class="ruby-identifier">beta_squared</span> = <span class="ruby-identifier">beta</span> * <span class="ruby-identifier">beta</span>
+206:         <span class="ruby-keyword kw">end</span>
+207:         
+208:         ((<span class="ruby-identifier">beta_squared</span> <span class="ruby-operator">+</span> <span class="ruby-value">1</span>) * <span class="ruby-identifier">precision</span> * <span class="ruby-identifier">recall</span>) <span class="ruby-operator">/</span> ((<span class="ruby-identifier">beta_squared</span> * <span class="ruby-identifier">precision</span>) <span class="ruby-operator">+</span> <span class="ruby-identifier">recall</span>)
+209:         
+210:       <span class="ruby-keyword kw">rescue</span> <span class="ruby-constant">Exception</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-identifier">e</span>
+211:         <span class="ruby-identifier">raise</span> <span class="ruby-value str">&quot;Error while calculating F-Measure: &quot;</span> <span class="ruby-operator">+</span> <span class="ruby-identifier">e</span>.<span class="ruby-identifier">message</span>
+212:       <span class="ruby-keyword kw">end</span>
+213:       
+214:     <span class="ruby-keyword kw">end</span></pre>
+					</div>
+					
+				</div>
+
+				
+
+				
+			</div>
+
+		
+			<div id="load-from-yaml-file-method" class="method-detail ">
+				<a name="method-i-load_from_yaml_file"></a>
+
+				<div class="method-heading">
+				
+					<span class="method-name">load_from_yaml_file</span><span
+						class="method-args">(file)</span>
+					<span class="method-click-advice">click to toggle source</span>
+				
+				</div>
+
+				<div class="method-description">
+					
+					<p>
+Loads Documents from a simple YAML file Each entry should contain:
+</p>
+<ul>
+<li><p>
+&#8220;document&#8221;      The identifier of the <a
+href="Document.html">Document</a>
+</p>
+</li>
+<li><p>
+&#8220;score&#8221;         The relevancy score for this <a
+href="Document.html">Document</a>
+</p>
+</li>
+</ul>
+					
+
+					
+					<div class="method-source-code"
+						id="load-from-yaml-file-source">
+<pre>
+     <span class="ruby-comment cmt"># File lib/retreval/query_result.rb, line 123</span>
+123:     <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">load_from_yaml_file</span>(<span class="ruby-identifier">file</span>)
+124:       
+125:       <span class="ruby-keyword kw">begin</span>
+126:         <span class="ruby-ivar">@ydoc</span> = <span class="ruby-constant">YAML</span><span class="ruby-operator">::</span><span class="ruby-identifier">load</span>(<span class="ruby-constant">File</span>.<span class="ruby-identifier">open</span>(<span class="ruby-identifier">file</span>, <span class="ruby-value str">&quot;r&quot;</span>))
+127:         <span class="ruby-ivar">@ydoc</span>.<span class="ruby-identifier">each</span> <span class="ruby-keyword kw">do</span> <span class="ruby-operator">|</span><span class="ruby-identifier">entry</span><span class="ruby-operator">|</span>
+128:           <span class="ruby-identifier">document</span> = <span class="ruby-identifier">entry</span>[<span class="ruby-value str">&quot;document&quot;</span>]    <span class="ruby-comment cmt"># =&gt; the identifier of the document</span>
+129:           <span class="ruby-identifier">score</span> = <span class="ruby-identifier">entry</span>[<span class="ruby-value str">&quot;score&quot;</span>]          <span class="ruby-comment cmt"># =&gt; the relevancy score</span>
+130:           <span class="ruby-identifier">add_document</span> <span class="ruby-value">:document</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-identifier">document</span>, <span class="ruby-value">:score</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-identifier">score</span>
+131:         <span class="ruby-keyword kw">end</span>
+132:         
+133:       <span class="ruby-keyword kw">rescue</span> <span class="ruby-constant">Exception</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-identifier">e</span>
+134:         <span class="ruby-identifier">raise</span> <span class="ruby-value str">&quot;Error while parsing the YAML document: &quot;</span> <span class="ruby-operator">+</span> <span class="ruby-identifier">e</span>.<span class="ruby-identifier">message</span>
+135:       <span class="ruby-keyword kw">end</span>
+136:       
+137:     <span class="ruby-keyword kw">end</span></pre>
+					</div>
+					
+				</div>
+
+				
+
+				
+			</div>
+
+		
+			<div id="print-contingency-table-method" class="method-detail ">
+				<a name="method-i-print_contingency_table"></a>
+
+				<div class="method-heading">
+				
+					<span class="method-name">print_contingency_table</span><span
+						class="method-args">()</span>
+					<span class="method-click-advice">click to toggle source</span>
+				
+				</div>
+
+				<div class="method-description">
+					
+					<p>
+Prints a pretty contingency table summary
+</p>
+					
+
+					
+					<div class="method-source-code"
+						id="print-contingency-table-source">
+<pre>
+     <span class="ruby-comment cmt"># File lib/retreval/query_result.rb, line 167</span>
+167:     <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">print_contingency_table</span>
+168:       <span class="ruby-identifier">results</span> = <span class="ruby-identifier">calculate</span>
+169:       
+170:       <span class="ruby-identifier">tp</span> = <span class="ruby-identifier">results</span>[<span class="ruby-value">:true_positives</span>]
+171:       <span class="ruby-identifier">fp</span> = <span class="ruby-identifier">results</span>[<span class="ruby-value">:false_positives</span>]
+172:       <span class="ruby-identifier">tn</span> = <span class="ruby-identifier">results</span>[<span class="ruby-value">:true_negatives</span>]
+173:       <span class="ruby-identifier">fn</span> = <span class="ruby-identifier">results</span>[<span class="ruby-value">:false_negatives</span>]
+174:       
+175:       <span class="ruby-identifier">print</span> <span class="ruby-value str">&quot;\t\t&quot;</span>
+176:       <span class="ruby-identifier">print</span> <span class="ruby-value str">&quot;| Relevant\t| Nonrelevant\t| Total\n&quot;</span>
+177:       <span class="ruby-identifier">print</span> <span class="ruby-value str">&quot;---------------------------------------------------------\n&quot;</span>
+178:       <span class="ruby-identifier">print</span> <span class="ruby-value str">&quot;Retrieved\t| &quot;</span> <span class="ruby-operator">+</span> <span class="ruby-identifier">tp</span>.<span class="ruby-identifier">to_s</span> <span class="ruby-operator">+</span> <span class="ruby-value str">&quot; \t\t| &quot;</span> <span class="ruby-operator">+</span> <span class="ruby-identifier">fp</span>.<span class="ruby-identifier">to_s</span> <span class="ruby-operator">+</span> <span class="ruby-value str">&quot; \t\t| &quot;</span> <span class="ruby-operator">+</span> (<span class="ruby-identifier">tp</span><span class="ruby-operator">+</span><span class="ruby-identifier">fp</span>).<span class="ruby-identifier">to_s</span> <span class="ruby-operator">+</span> <span class="ruby-value str">&quot; \n&quot;</span>
+179:       <span class="ruby-identifier">print</span> <span class="ruby-value str">&quot;Not Retrieved\t| &quot;</span> <span class="ruby-operator">+</span> <span class="ruby-identifier">fn</span>.<span class="ruby-identifier">to_s</span> <span class="ruby-operator">+</span> <span class="ruby-value str">&quot; \t\t| &quot;</span> <span class="ruby-operator">+</span> <span class="ruby-identifier">tn</span>.<span class="ruby-identifier">to_s</span> <span class="ruby-operator">+</span> <span class="ruby-value str">&quot; \t\t| &quot;</span> <span class="ruby-operator">+</span> (<span class="ruby-identifier">fn</span><span class="ruby-operator">+</span><span class="ruby-identifier">tn</span>).<span class="ruby-identifier">to_s</span> <span class="ruby-operator">+</span> <span class="ruby-value str">&quot; \n&quot;</span>
+180:       <span class="ruby-identifier">print</span> <span class="ruby-value str">&quot;---------------------------------------------------------\n&quot;</span>
+181:       <span class="ruby-identifier">print</span> <span class="ruby-value str">&quot;\t\t| &quot;</span> <span class="ruby-operator">+</span> (<span class="ruby-identifier">tp</span><span class="ruby-operator">+</span><span class="ruby-identifier">fn</span>).<span class="ruby-identifier">to_s</span> <span class="ruby-operator">+</span> <span class="ruby-value str">&quot; \t\t| &quot;</span> <span class="ruby-operator">+</span> (<span class="ruby-identifier">fp</span><span class="ruby-operator">+</span><span class="ruby-identifier">tn</span>).<span class="ruby-identifier">to_s</span> <span class="ruby-operator">+</span> <span class="ruby-value str">&quot; \t\t| &quot;</span> <span class="ruby-operator">+</span> (<span class="ruby-identifier">tp</span><span class="ruby-operator">+</span><span class="ruby-identifier">fp</span><span class="ruby-operator">+</span><span class="ruby-identifier">tn</span><span class="ruby-operator">+</span><span class="ruby-identifier">fn</span>).<span class="ruby-identifier">to_s</span> <span class="ruby-operator">+</span> <span class="ruby-value str">&quot;\n&quot;</span>
+182:       <span class="ruby-identifier">print</span> <span class="ruby-value str">&quot;\n&quot;</span>
+183:     <span class="ruby-keyword kw">end</span></pre>
+					</div>
+					
+				</div>
+
+				
+
+				
+			</div>
+
+		
+		</div>
+	
+		<div id="private-instance-method-details" class="method-section section">
+			<h3 class="section-header">Private Instance Methods</h3>
+
+		
+			<div id="calculate-method" class="method-detail ">
+				<a name="method-i-calculate"></a>
+
+				<div class="method-heading">
+				
+					<span class="method-name">calculate</span><span
+						class="method-args">(resultset = nil)</span>
+					<span class="method-click-advice">click to toggle source</span>
+				
+				</div>
+
+				<div class="method-description">
+					
+					<p>
+This is the method that performs all necessary calculations on a set of
+results. Never call this. It should be called automatically.
+</p>
+					
+
+					
+					<div class="method-source-code"
+						id="calculate-source">
+<pre>
+     <span class="ruby-comment cmt"># File lib/retreval/query_result.rb, line 228</span>
+228:     <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">calculate</span>(<span class="ruby-identifier">resultset</span> = <span class="ruby-keyword kw">nil</span>)
+229:       
+230:       <span class="ruby-comment cmt"># Use the gold standard we initially received</span>
+231:       <span class="ruby-identifier">standard</span> = <span class="ruby-ivar">@gold_standard</span>
+232:       
+233:       <span class="ruby-comment cmt"># If there is an unranked result to be calculated ..</span>
+234:       <span class="ruby-keyword kw">if</span> <span class="ruby-identifier">resultset</span>.<span class="ruby-identifier">nil?</span>
+235:         <span class="ruby-identifier">unranked</span> = <span class="ruby-keyword kw">true</span>
+236:         <span class="ruby-comment cmt"># ... we'll just take the array of documents for this result</span>
+237:         <span class="ruby-identifier">resultset</span> = <span class="ruby-constant">OpenStruct</span>.<span class="ruby-identifier">new</span>
+238:         <span class="ruby-identifier">resultset</span>.<span class="ruby-identifier">documents</span> = <span class="ruby-ivar">@documents</span>.<span class="ruby-identifier">values</span>
+239:         <span class="ruby-identifier">resultset</span>.<span class="ruby-identifier">query</span> = <span class="ruby-ivar">@query</span>
+240:       <span class="ruby-keyword kw">end</span>
+241: 
+242:       <span class="ruby-keyword kw">begin</span>
+243:         <span class="ruby-identifier">all_items</span> = <span class="ruby-identifier">standard</span>.<span class="ruby-identifier">documents</span>.<span class="ruby-identifier">length</span>               <span class="ruby-comment cmt"># =&gt; all documents this gold standard contains</span>
+244:         <span class="ruby-identifier">retrieved_items</span> = <span class="ruby-identifier">resultset</span>.<span class="ruby-identifier">documents</span>.<span class="ruby-identifier">length</span>        <span class="ruby-comment cmt"># =&gt; all items retrieved for this information need</span>
+245:         <span class="ruby-identifier">not_retrieved_items</span> = <span class="ruby-identifier">all_items</span> <span class="ruby-operator">-</span> <span class="ruby-identifier">retrieved_items</span>   <span class="ruby-comment cmt"># =&gt; all items NOT retrieved for this information need</span>
+246:         <span class="ruby-identifier">retrieved_relevant_items</span> = <span class="ruby-value">0</span>                        <span class="ruby-comment cmt"># =&gt; the count of retrieved and relevant documents</span>
+247:         <span class="ruby-identifier">not_retrieved_relevant_items</span> = <span class="ruby-value">0</span>                    <span class="ruby-comment cmt"># =&gt; the count of nonretrieved relevant documents</span>
+248: 
+249:         <span class="ruby-comment cmt"># Get the query we are working on</span>
+250:         <span class="ruby-identifier">query</span> = <span class="ruby-identifier">resultset</span>.<span class="ruby-identifier">query</span>
+251:       
+252:         <span class="ruby-comment cmt"># Get the document sets we are working on</span>
+253:         <span class="ruby-identifier">retrieved_documents</span> = <span class="ruby-identifier">resultset</span>.<span class="ruby-identifier">documents</span>           <span class="ruby-comment cmt"># =&gt; This is an Array all the time</span>
+254:         <span class="ruby-comment cmt"># This means that we will filter out all retreived documents from the Gold Standard</span>
+255:         <span class="ruby-comment cmt"># TODO: This can definitely be improved, but how?</span>
+256:         <span class="ruby-identifier">not_retrieved_documents</span> = <span class="ruby-identifier">standard</span>.<span class="ruby-identifier">documents</span>.<span class="ruby-identifier">reject</span> { <span class="ruby-operator">|</span><span class="ruby-identifier">key</span>, <span class="ruby-identifier">doc</span><span class="ruby-operator">|</span> <span class="ruby-identifier">retrieved_documents</span>.<span class="ruby-identifier">include?</span> <span class="ruby-identifier">doc</span> } <span class="ruby-comment cmt"># =&gt; This is a Hash as it refers to the Gold Standard</span>
+257:         
+258:         <span class="ruby-comment cmt"># Check whether each of the retrieved documents is relevant or not ...</span>
+259:         <span class="ruby-identifier">retrieved_documents</span>.<span class="ruby-identifier">each</span> <span class="ruby-keyword kw">do</span> <span class="ruby-operator">|</span><span class="ruby-identifier">doc</span><span class="ruby-operator">|</span>
+260:           <span class="ruby-identifier">relevant</span> = <span class="ruby-identifier">standard</span>.<span class="ruby-identifier">relevant?</span> <span class="ruby-value">:document</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-identifier">doc</span>.<span class="ruby-identifier">id</span>, <span class="ruby-value">:query</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-identifier">query</span>.<span class="ruby-identifier">querystring</span>
+261:           <span class="ruby-identifier">retrieved_relevant_items</span> <span class="ruby-operator">+=</span><span class="ruby-value">1</span> <span class="ruby-keyword kw">if</span> <span class="ruby-identifier">relevant</span>
+262:         <span class="ruby-keyword kw">end</span>
+263:         <span class="ruby-identifier">retrieved_nonrelevant_items</span> = <span class="ruby-identifier">retrieved_items</span> <span class="ruby-operator">-</span> <span class="ruby-identifier">retrieved_relevant_items</span>
+264:         
+265:         <span class="ruby-comment cmt"># ... do the same for nonretrieved documents. This is a hash, so we only take the values</span>
+266:         <span class="ruby-identifier">not_retrieved_documents</span>.<span class="ruby-identifier">values</span>.<span class="ruby-identifier">each</span> <span class="ruby-keyword kw">do</span> <span class="ruby-operator">|</span><span class="ruby-identifier">doc</span><span class="ruby-operator">|</span>
+267:           <span class="ruby-identifier">relevant</span> = <span class="ruby-identifier">standard</span>.<span class="ruby-identifier">relevant?</span> <span class="ruby-value">:document</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-identifier">doc</span>.<span class="ruby-identifier">id</span>, <span class="ruby-value">:query</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-identifier">query</span>.<span class="ruby-identifier">querystring</span>
+268:           <span class="ruby-identifier">not_retrieved_relevant_items</span> <span class="ruby-operator">+=</span> <span class="ruby-value">1</span> <span class="ruby-keyword kw">if</span> <span class="ruby-identifier">relevant</span>
+269:         <span class="ruby-keyword kw">end</span>
+270:         <span class="ruby-identifier">not_retrieved_nonrelevant_items</span> = <span class="ruby-identifier">not_retrieved_items</span> <span class="ruby-operator">-</span> <span class="ruby-identifier">not_retrieved_relevant_items</span>
+271:       
+272:         <span class="ruby-comment cmt"># Now calculate the sum counts</span>
+273:         <span class="ruby-identifier">relevant_items</span> = <span class="ruby-identifier">retrieved_relevant_items</span> <span class="ruby-operator">+</span> <span class="ruby-identifier">not_retrieved_relevant_items</span>
+274:         <span class="ruby-identifier">nonrelevant_items</span> = <span class="ruby-identifier">retrieved_nonrelevant_items</span> <span class="ruby-operator">+</span> <span class="ruby-identifier">not_retrieved_nonrelevant_items</span>
+275:       
+276:         <span class="ruby-comment cmt"># Finally, calculate precision and recall</span>
+277:         <span class="ruby-identifier">precision</span> = <span class="ruby-identifier">retrieved_relevant_items</span>.<span class="ruby-identifier">to_f</span> <span class="ruby-operator">/</span> <span class="ruby-identifier">retrieved_items</span>.<span class="ruby-identifier">to_f</span>
+278:         <span class="ruby-keyword kw">if</span> <span class="ruby-identifier">relevant_items</span> <span class="ruby-operator">!=</span> <span class="ruby-value">0</span>
+279:           <span class="ruby-identifier">recall</span> = <span class="ruby-identifier">retrieved_relevant_items</span>.<span class="ruby-identifier">to_f</span> <span class="ruby-operator">/</span> <span class="ruby-identifier">relevant_items</span>.<span class="ruby-identifier">to_f</span>
+280:         <span class="ruby-keyword kw">else</span>
+281:           <span class="ruby-identifier">recall</span> = <span class="ruby-value">0</span>
+282:         <span class="ruby-keyword kw">end</span>
+283:         
+284:         <span class="ruby-comment cmt"># This hash will be available as the result later</span>
+285:         <span class="ruby-identifier">results</span> = {
+286:           <span class="ruby-value">:precision</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-identifier">precision</span>,
+287:           <span class="ruby-value">:recall</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-identifier">recall</span>,
+288:           <span class="ruby-value">:false_negatives</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-identifier">not_retrieved_relevant_items</span>,
+289:           <span class="ruby-value">:false_positives</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-identifier">retrieved_nonrelevant_items</span>,
+290:           <span class="ruby-value">:true_negatives</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-identifier">not_retrieved_nonrelevant_items</span>,
+291:           <span class="ruby-value">:true_positives</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-identifier">retrieved_relevant_items</span>
+292:         }
+293:         
+294:         <span class="ruby-comment cmt"># Also, if we're doing a ranked evaluation, we want to find out if the</span>
+295:         <span class="ruby-comment cmt"># newly added document is relevant (thus increasing precision and recall)</span>
+296:         <span class="ruby-keyword kw">unless</span> <span class="ruby-identifier">unranked</span>
+297:           <span class="ruby-identifier">results</span>[<span class="ruby-value">:document</span>] = <span class="ruby-identifier">retrieved_documents</span>.<span class="ruby-identifier">last</span>.<span class="ruby-identifier">id</span>
+298:           <span class="ruby-identifier">results</span>[<span class="ruby-value">:relevant</span>] = <span class="ruby-identifier">standard</span>.<span class="ruby-identifier">relevant?</span> <span class="ruby-value">:document</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-identifier">results</span>[<span class="ruby-value">:document</span>], <span class="ruby-value">:query</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-identifier">query</span>.<span class="ruby-identifier">querystring</span>
+299:         <span class="ruby-keyword kw">end</span>
+300:         
+301:         <span class="ruby-identifier">results</span>
+302:         
+303:       <span class="ruby-keyword kw">end</span>
+304:     <span class="ruby-keyword kw">end</span></pre>
+					</div>
+					
+				</div>
+
+				
+
+				
+			</div>
+
+		
+		</div>
+	
+
+	</div>
+
+
+	<div id="rdoc-debugging-section-dump" class="debugging-section">
+	
+		<p>Disabled; run with --debug to generate this.</p>
+	
+	</div>
+
+	<div id="validator-badges">
+		<p><small><a href="http://validator.w3.org/check/referer">[Validate]</a></small></p>
+		<p><small>Generated with the <a href="http://deveiate.org/projects/Darkfish-Rdoc/">Darkfish
+			Rdoc Generator</a> 1.1.6</small>.</p>
+	</div>
+
+</body>
+</html>
+

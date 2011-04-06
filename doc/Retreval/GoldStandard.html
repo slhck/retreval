@@ -1,0 +1,1013 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+	"http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+	<meta content="text/html; charset=utf-8" http-equiv="Content-Type" />
+
+	<title>Class: Retreval::GoldStandard</title>
+
+	<link rel="stylesheet" href="../rdoc.css" type="text/css" media="screen" />
+
+	<script src="../js/jquery.js" type="text/javascript"
+		charset="utf-8"></script>
+	<script src="../js/thickbox-compressed.js" type="text/javascript"
+		charset="utf-8"></script>
+	<script src="../js/quicksearch.js" type="text/javascript"
+		charset="utf-8"></script>
+	<script src="../js/darkfish.js" type="text/javascript"
+		charset="utf-8"></script>
+
+</head>
+<body class="class">
+
+	<div id="metadata">
+		<div id="home-metadata">
+			<div id="home-section" class="section">
+        <h3 class="section-header">
+          <a href="../index.html">Home</a>
+          <a href="../index.html#classes">Classes</a>
+          <a href="../index.html#methods">Methods</a>
+        </h3>
+			</div>
+		</div>
+
+		<div id="file-metadata">
+			<div id="file-list-section" class="section">
+				<h3 class="section-header">In Files</h3>
+				<div class="section-body">
+					<ul>
+					
+						<li><a href="../lib/retreval/gold_standard_rb.html?TB_iframe=true&amp;height=550&amp;width=785"
+							class="thickbox" title="lib/retreval/gold_standard.rb">lib/retreval/gold_standard.rb</a></li>
+					
+					</ul>
+				</div>
+			</div>
+
+			
+		</div>
+
+		<div id="class-metadata">
+
+			<!-- Parent Class -->
+			
+			<div id="parent-class-section" class="section">
+				<h3 class="section-header">Parent</h3>
+				
+				<p class="link">Object</p>
+				
+			</div>
+			
+
+			<!-- Namespace Contents -->
+			
+
+			<!-- Method Quickref -->
+			
+			<div id="method-list-section" class="section">
+				<h3 class="section-header">Methods</h3>
+				<ul class="link-list">
+					
+					<li><a href="#method-c-new">::new</a></li>
+					
+					<li><a href="#method-i-%3C%3C">#<<</a></li>
+					
+					<li><a href="#method-i-add_judgement">#add_judgement</a></li>
+					
+					<li><a href="#method-i-contains_document%3F">#contains_document?</a></li>
+					
+					<li><a href="#method-i-contains_judgement%3F">#contains_judgement?</a></li>
+					
+					<li><a href="#method-i-contains_query%3F">#contains_query?</a></li>
+					
+					<li><a href="#method-i-contains_user%3F">#contains_user?</a></li>
+					
+					<li><a href="#method-i-kappa">#kappa</a></li>
+					
+					<li><a href="#method-i-load_from_plaintext_file">#load_from_plaintext_file</a></li>
+					
+					<li><a href="#method-i-load_from_yaml_file">#load_from_yaml_file</a></li>
+					
+					<li><a href="#method-i-pairwise_kappa">#pairwise_kappa</a></li>
+					
+					<li><a href="#method-i-relevant%3F">#relevant?</a></li>
+					
+				</ul>
+			</div>
+			
+
+			<!-- Included Modules -->
+			
+		</div>
+
+		<div id="project-metadata">
+			
+			
+			<div id="fileindex-section" class="section project-section">
+				<h3 class="section-header">Files</h3>
+				<ul>
+				
+					<li class="file"><a href="../CHANGELOG.html">CHANGELOG</a></li>
+				
+					<li class="file"><a href="../TODO.html">TODO</a></li>
+				
+				</ul>
+			</div>
+			
+
+			<div id="classindex-section" class="section project-section">
+				<h3 class="section-header">Class Index
+					<span class="search-toggle"><img src="../images/find.png"
+						height="16" width="16" alt="[+]"
+						title="show/hide quicksearch" /></span></h3>
+				<form action="#" method="get" accept-charset="utf-8" class="initially-hidden">
+				<fieldset>
+					<legend>Quicksearch</legend>
+					<input type="text" name="quicksearch" value=""
+						class="quicksearch-field" />
+				</fieldset>
+				</form>
+
+				<ul class="link-list">
+				
+					<li><a href="../Retreval.html">Retreval</a></li>
+				
+					<li><a href="../Retreval/Document.html">Retreval::Document</a></li>
+				
+					<li><a href="../Retreval/GoldStandard.html">Retreval::GoldStandard</a></li>
+				
+					<li><a href="../Retreval/Judgement.html">Retreval::Judgement</a></li>
+				
+					<li><a href="../Retreval/Options.html">Retreval::Options</a></li>
+				
+					<li><a href="../Retreval/Query.html">Retreval::Query</a></li>
+				
+					<li><a href="../Retreval/QueryResult.html">Retreval::QueryResult</a></li>
+				
+					<li><a href="../Retreval/QueryResultSet.html">Retreval::QueryResultSet</a></li>
+				
+					<li><a href="../Retreval/RankedQueryResult.html">Retreval::RankedQueryResult</a></li>
+				
+					<li><a href="../Retreval/ResultDocument.html">Retreval::ResultDocument</a></li>
+				
+					<li><a href="../Retreval/Runner.html">Retreval::Runner</a></li>
+				
+					<li><a href="../Retreval/UnrankedQueryResult.html">Retreval::UnrankedQueryResult</a></li>
+				
+					<li><a href="../Retreval/User.html">Retreval::User</a></li>
+				
+					<li><a href="../TestGoldStandard.html">TestGoldStandard</a></li>
+				
+					<li><a href="../TestQueryResult.html">TestQueryResult</a></li>
+				
+				</ul>
+				<div id="no-class-search-results" style="display: none;">No matching classes.</div>
+			</div>
+
+			
+		</div>
+	</div>
+
+	<div id="documentation">
+		<h1 class="class">Retreval::GoldStandard</h1>
+
+		<div id="description">
+			<p>
+A Gold Standard is composed of several Judgements for the  cartesian
+product of Documents and Queries
+</p>
+
+		</div>
+
+		<!-- Constants -->
+		
+
+		<!-- Attributes -->
+		
+		<div id="attribute-method-details" class="method-section section">
+			<h3 class="section-header">Attributes</h3>
+
+			
+			<div id="documents-attribute-method" class="method-detail">
+				<a name="documents"></a>
+				
+				<div class="method-heading attribute-method-heading">
+					<span class="method-name">documents</span><span
+						class="attribute-access-type">[R]</span>
+				</div>
+
+				<div class="method-description">
+				
+				
+				
+				</div>
+			</div>
+			
+			<div id="judgements-attribute-method" class="method-detail">
+				<a name="judgements"></a>
+				
+				<div class="method-heading attribute-method-heading">
+					<span class="method-name">judgements</span><span
+						class="attribute-access-type">[R]</span>
+				</div>
+
+				<div class="method-description">
+				
+				
+				
+				</div>
+			</div>
+			
+			<div id="queries-attribute-method" class="method-detail">
+				<a name="queries"></a>
+				
+				<div class="method-heading attribute-method-heading">
+					<span class="method-name">queries</span><span
+						class="attribute-access-type">[R]</span>
+				</div>
+
+				<div class="method-description">
+				
+				
+				
+				</div>
+			</div>
+			
+			<div id="users-attribute-method" class="method-detail">
+				<a name="users"></a>
+				
+				<div class="method-heading attribute-method-heading">
+					<span class="method-name">users</span><span
+						class="attribute-access-type">[R]</span>
+				</div>
+
+				<div class="method-description">
+				
+				
+				
+				</div>
+			</div>
+			
+		</div>
+		
+
+		<!-- Methods -->
+		
+		<div id="public-class-method-details" class="method-section section">
+			<h3 class="section-header">Public Class Methods</h3>
+
+		
+			<div id="new-method" class="method-detail ">
+				<a name="method-c-new"></a>
+
+				<div class="method-heading">
+				
+					<span class="method-name">new</span><span
+						class="method-args">(args = {})</span>
+					<span class="method-click-advice">click to toggle source</span>
+				
+				</div>
+
+				<div class="method-description">
+					
+					<p>
+Creates a new gold standard. One can optionally construct the gold standard
+with triples given. This would be a hash like:
+</p>
+<pre>
+    triples = { 
+       :document =&gt; &quot;Document ID&quot;, 
+       :query =&gt; &quot;Some query&quot;, 
+       :relevant =&gt; &quot;true&quot; 
+     }
+</pre>
+<p>
+Called via:
+</p>
+<pre>
+    GoldStandard.new :triples =&gt; an_array_of_triples</pre>
+					
+
+					
+					<div class="method-source-code"
+						id="new-source">
+<pre>
+    <span class="ruby-comment cmt"># File lib/retreval/gold_standard.rb, line 19</span>
+19:     <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">initialize</span>(<span class="ruby-identifier">args</span> = {})
+20:       <span class="ruby-ivar">@documents</span> = <span class="ruby-constant">Hash</span>.<span class="ruby-identifier">new</span>
+21:       <span class="ruby-ivar">@queries</span> = <span class="ruby-constant">Array</span>.<span class="ruby-identifier">new</span>
+22:       <span class="ruby-ivar">@judgements</span> = <span class="ruby-constant">Array</span>.<span class="ruby-identifier">new</span>
+23:       <span class="ruby-ivar">@users</span> = <span class="ruby-constant">Hash</span>.<span class="ruby-identifier">new</span>
+24:       
+25:       <span class="ruby-comment cmt"># one can also construct a Gold Standard with everything already loaded</span>
+26:       <span class="ruby-keyword kw">unless</span> <span class="ruby-identifier">args</span>[<span class="ruby-value">:triples</span>].<span class="ruby-identifier">nil?</span>
+27:         <span class="ruby-identifier">args</span>[<span class="ruby-value">:triples</span>].<span class="ruby-identifier">each</span> <span class="ruby-keyword kw">do</span> <span class="ruby-operator">|</span><span class="ruby-identifier">triple</span><span class="ruby-operator">|</span>
+28:           <span class="ruby-identifier">add_judgement</span>(<span class="ruby-identifier">triple</span>)
+29:         <span class="ruby-keyword kw">end</span>
+30:       <span class="ruby-keyword kw">end</span>
+31:     <span class="ruby-keyword kw">end</span></pre>
+					</div>
+					
+				</div>
+
+				
+
+				
+			</div>
+
+		
+		</div>
+	
+		<div id="public-instance-method-details" class="method-section section">
+			<h3 class="section-header">Public Instance Methods</h3>
+
+		
+			<div id="--method" class="method-detail ">
+				<a name="method-i-%3C%3C"></a>
+
+				<div class="method-heading">
+				
+					<span class="method-name">&lt;&lt;</span><span
+						class="method-args">(args)</span>
+					<span class="method-click-advice">click to toggle source</span>
+				
+				</div>
+
+				<div class="method-description">
+					
+					<p>
+This is essentially the same as adding a <a
+href="Judgement.html">Judgement</a>, we can use this operator too.
+</p>
+					
+
+					
+					<div class="method-source-code"
+						id="--source">
+<pre>
+     <span class="ruby-comment cmt"># File lib/retreval/gold_standard.rb, line 163</span>
+163:     <span class="ruby-keyword kw">def</span> <span class="ruby-operator">&lt;&lt;</span>(<span class="ruby-identifier">args</span>)
+164:       <span class="ruby-keyword kw">self</span>.<span class="ruby-identifier">add_judgement</span> <span class="ruby-identifier">args</span>
+165:     <span class="ruby-keyword kw">end</span></pre>
+					</div>
+					
+				</div>
+
+				
+
+				
+			</div>
+
+		
+			<div id="add-judgement-method" class="method-detail ">
+				<a name="method-i-add_judgement"></a>
+
+				<div class="method-heading">
+				
+					<span class="method-name">add_judgement</span><span
+						class="method-args">(args)</span>
+					<span class="method-click-advice">click to toggle source</span>
+				
+				</div>
+
+				<div class="method-description">
+					
+					<p>
+Adds a judgement (<a href="Document.html">Document</a>, <a
+href="Query.html">Query</a>, relevancy) to the <a
+href="GoldStandard.html">GoldStandard</a>. All of those are represented as
+strings in the public interface. The user ID is an optional parameter that
+can be used to measure kappa later. Call this with:
+</p>
+<pre>
+    add_judgement :document =&gt; doc_id, :query =&gt; query_string, :relevant =&gt; boolean, :user =&gt; John</pre>
+					
+
+					
+					<div class="method-source-code"
+						id="add-judgement-source">
+<pre>
+     <span class="ruby-comment cmt"># File lib/retreval/gold_standard.rb, line 118</span>
+118:     <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">add_judgement</span>(<span class="ruby-identifier">args</span>)
+119:       <span class="ruby-identifier">document_id</span> = <span class="ruby-identifier">args</span>[<span class="ruby-value">:document</span>]
+120:       <span class="ruby-identifier">query_string</span> = <span class="ruby-identifier">args</span>[<span class="ruby-value">:query</span>]
+121:       <span class="ruby-identifier">relevant</span> = <span class="ruby-identifier">args</span>[<span class="ruby-value">:relevant</span>]
+122:       <span class="ruby-identifier">user_id</span> = <span class="ruby-identifier">args</span>[<span class="ruby-value">:user</span>]
+123:       
+124:       
+125:       <span class="ruby-keyword kw">unless</span> <span class="ruby-identifier">document_id</span>.<span class="ruby-identifier">nil?</span> <span class="ruby-keyword kw">or</span> <span class="ruby-identifier">query_string</span>.<span class="ruby-identifier">nil?</span>
+126:         <span class="ruby-identifier">document</span> = <span class="ruby-constant">Document</span>.<span class="ruby-identifier">new</span> <span class="ruby-value">:id</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-identifier">document_id</span>
+127:         <span class="ruby-identifier">query</span> = <span class="ruby-constant">Query</span>.<span class="ruby-identifier">new</span> <span class="ruby-value">:querystring</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-identifier">query_string</span>
+128:         
+129:         
+130:         <span class="ruby-comment cmt"># If the user exists, load it, otherwise create a new one</span>
+131:         <span class="ruby-keyword kw">if</span> <span class="ruby-ivar">@users</span>.<span class="ruby-identifier">has_key?</span>(<span class="ruby-identifier">user_id</span>)
+132:           <span class="ruby-identifier">user</span> = <span class="ruby-ivar">@users</span>[<span class="ruby-identifier">user_id</span>]
+133:         <span class="ruby-keyword kw">else</span>
+134:           <span class="ruby-identifier">user</span> = <span class="ruby-constant">User</span>.<span class="ruby-identifier">new</span> <span class="ruby-value">:id</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-identifier">user_id</span> <span class="ruby-keyword kw">unless</span> <span class="ruby-identifier">user_id</span>.<span class="ruby-identifier">nil?</span>
+135:         <span class="ruby-keyword kw">end</span>
+136:         
+137:         <span class="ruby-comment cmt"># If there is no judgement for this combination, just add the document/query pair</span>
+138:         <span class="ruby-keyword kw">if</span> <span class="ruby-identifier">relevant</span>.<span class="ruby-identifier">nil?</span>
+139:           <span class="ruby-ivar">@documents</span>[<span class="ruby-identifier">document_id</span>] = <span class="ruby-identifier">document</span>
+140:           <span class="ruby-ivar">@queries</span> <span class="ruby-operator">&lt;&lt;</span> <span class="ruby-identifier">query</span> <span class="ruby-keyword kw">unless</span> <span class="ruby-ivar">@queries</span>.<span class="ruby-identifier">include?</span>(<span class="ruby-identifier">query</span>)
+141:           <span class="ruby-keyword kw">return</span>
+142:         <span class="ruby-keyword kw">end</span>
+143:         
+144:         <span class="ruby-keyword kw">if</span> <span class="ruby-identifier">user_id</span>.<span class="ruby-identifier">nil?</span>
+145:           <span class="ruby-identifier">judgement</span> = <span class="ruby-constant">Judgement</span>.<span class="ruby-identifier">new</span> <span class="ruby-value">:document</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-identifier">document</span>, <span class="ruby-value">:query</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-identifier">query</span>, <span class="ruby-value">:relevant</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-identifier">relevant</span>
+146:         <span class="ruby-keyword kw">else</span>
+147:           <span class="ruby-identifier">judgement</span> = <span class="ruby-constant">Judgement</span>.<span class="ruby-identifier">new</span> <span class="ruby-value">:document</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-identifier">document</span>, <span class="ruby-value">:query</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-identifier">query</span>, <span class="ruby-value">:relevant</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-identifier">relevant</span>, <span class="ruby-value">:user</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-identifier">user</span>
+148:           
+149:           <span class="ruby-identifier">user</span>.<span class="ruby-identifier">add_judgement</span>(<span class="ruby-identifier">judgement</span>)
+150:           <span class="ruby-ivar">@users</span>[<span class="ruby-identifier">user_id</span>] = <span class="ruby-identifier">user</span>
+151:         <span class="ruby-keyword kw">end</span>
+152:         
+153:         <span class="ruby-ivar">@documents</span>[<span class="ruby-identifier">document_id</span>] = <span class="ruby-identifier">document</span>
+154:         <span class="ruby-ivar">@queries</span> <span class="ruby-operator">&lt;&lt;</span> <span class="ruby-identifier">query</span> <span class="ruby-keyword kw">unless</span> <span class="ruby-ivar">@queries</span>.<span class="ruby-identifier">include?</span>(<span class="ruby-identifier">query</span>)
+155:         <span class="ruby-ivar">@judgements</span> <span class="ruby-operator">&lt;&lt;</span> <span class="ruby-identifier">judgement</span>
+156:       <span class="ruby-keyword kw">else</span>
+157:         <span class="ruby-identifier">raise</span> <span class="ruby-constant">ArgumentError</span>.<span class="ruby-identifier">new</span>(<span class="ruby-value str">&quot;Need at least a Document, and a Query for creating the new entry.&quot;</span>)
+158:       <span class="ruby-keyword kw">end</span>
+159:       
+160:     <span class="ruby-keyword kw">end</span></pre>
+					</div>
+					
+				</div>
+
+				
+
+				
+			</div>
+
+		
+			<div id="contains-document--method" class="method-detail ">
+				<a name="method-i-contains_document%3F"></a>
+
+				<div class="method-heading">
+				
+					<span class="method-name">contains_document?</span><span
+						class="method-args">(args)</span>
+					<span class="method-click-advice">click to toggle source</span>
+				
+				</div>
+
+				<div class="method-description">
+					
+					<p>
+Returns true if this <a href="GoldStandard.html">GoldStandard</a> contains
+this <a href="Document.html">Document</a> Called by:
+</p>
+<pre>
+    contains_document? :id =&gt; &quot;document ID&quot;</pre>
+					
+
+					
+					<div class="method-source-code"
+						id="contains-document--source">
+<pre>
+     <span class="ruby-comment cmt"># File lib/retreval/gold_standard.rb, line 210</span>
+210:     <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">contains_document?</span>(<span class="ruby-identifier">args</span>)
+211:       <span class="ruby-identifier">document_id</span> = <span class="ruby-identifier">args</span>[<span class="ruby-value">:id</span>]
+212:       <span class="ruby-ivar">@documents</span>.<span class="ruby-identifier">key?</span> <span class="ruby-identifier">document_id</span>
+213:     <span class="ruby-keyword kw">end</span></pre>
+					</div>
+					
+				</div>
+
+				
+
+				
+			</div>
+
+		
+			<div id="contains-judgement--method" class="method-detail ">
+				<a name="method-i-contains_judgement%3F"></a>
+
+				<div class="method-heading">
+				
+					<span class="method-name">contains_judgement?</span><span
+						class="method-args">(args)</span>
+					<span class="method-click-advice">click to toggle source</span>
+				
+				</div>
+
+				<div class="method-description">
+					
+					<p>
+Returns true if this <a href="GoldStandard.html">GoldStandard</a> contains
+a <a href="Judgement.html">Judgement</a> for this <a
+href="Query.html">Query</a> / <a href="Document.html">Document</a> pair
+This is called by:
+</p>
+<pre>
+    contains_judgement? :id =&gt; &quot;the document ID&quot;, :querystring =&gt; &quot;the query&quot;</pre>
+					
+
+					
+					<div class="method-source-code"
+						id="contains-judgement--source">
+<pre>
+     <span class="ruby-comment cmt"># File lib/retreval/gold_standard.rb, line 196</span>
+196:     <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">contains_judgement?</span>(<span class="ruby-identifier">args</span>)
+197:       <span class="ruby-identifier">query</span> = <span class="ruby-constant">Query</span>.<span class="ruby-identifier">new</span> <span class="ruby-value">:querystring</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-identifier">args</span>[<span class="ruby-value">:query</span>]
+198:       <span class="ruby-identifier">document</span> = <span class="ruby-constant">Document</span>.<span class="ruby-identifier">new</span> <span class="ruby-value">:id</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-identifier">args</span>[<span class="ruby-value">:document</span>]
+199:       
+200:       <span class="ruby-comment cmt">#TODO: a hash could improve performance here as well</span>
+201:       <span class="ruby-ivar">@judgements</span>.<span class="ruby-identifier">each</span> { <span class="ruby-operator">|</span><span class="ruby-identifier">judgement</span><span class="ruby-operator">|</span> <span class="ruby-keyword kw">return</span> <span class="ruby-keyword kw">true</span> <span class="ruby-keyword kw">if</span> <span class="ruby-identifier">judgement</span>.<span class="ruby-identifier">document</span> <span class="ruby-operator">==</span> <span class="ruby-identifier">document</span> <span class="ruby-keyword kw">and</span> <span class="ruby-identifier">judgement</span>.<span class="ruby-identifier">query</span> <span class="ruby-operator">==</span> <span class="ruby-identifier">query</span> }
+202:       
+203:       <span class="ruby-keyword kw">false</span>
+204:     <span class="ruby-keyword kw">end</span></pre>
+					</div>
+					
+				</div>
+
+				
+
+				
+			</div>
+
+		
+			<div id="contains-query--method" class="method-detail ">
+				<a name="method-i-contains_query%3F"></a>
+
+				<div class="method-heading">
+				
+					<span class="method-name">contains_query?</span><span
+						class="method-args">(args)</span>
+					<span class="method-click-advice">click to toggle source</span>
+				
+				</div>
+
+				<div class="method-description">
+					
+					<p>
+Returns true if this <a href="GoldStandard.html">GoldStandard</a> contains
+this <a href="Query.html">Query</a> string Called by:
+</p>
+<pre>
+    contains_query? :querystring =&gt; &quot;the query&quot;</pre>
+					
+
+					
+					<div class="method-source-code"
+						id="contains-query--source">
+<pre>
+     <span class="ruby-comment cmt"># File lib/retreval/gold_standard.rb, line 219</span>
+219:     <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">contains_query?</span>(<span class="ruby-identifier">args</span>)
+220:       <span class="ruby-identifier">querystring</span> = <span class="ruby-identifier">args</span>[<span class="ruby-value">:querystring</span>]
+221:       <span class="ruby-identifier">query</span> = <span class="ruby-constant">Query</span>.<span class="ruby-identifier">new</span> <span class="ruby-value">:querystring</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-identifier">querystring</span>
+222:       <span class="ruby-ivar">@queries</span>.<span class="ruby-identifier">include?</span> <span class="ruby-identifier">query</span>
+223:     <span class="ruby-keyword kw">end</span></pre>
+					</div>
+					
+				</div>
+
+				
+
+				
+			</div>
+
+		
+			<div id="contains-user--method" class="method-detail ">
+				<a name="method-i-contains_user%3F"></a>
+
+				<div class="method-heading">
+				
+					<span class="method-name">contains_user?</span><span
+						class="method-args">(args)</span>
+					<span class="method-click-advice">click to toggle source</span>
+				
+				</div>
+
+				<div class="method-description">
+					
+					<p>
+Returns true if this <a href="GoldStandard.html">GoldStandard</a> contains
+this <a href="User.html">User</a> Called by:
+</p>
+<pre>
+    contains_user? :id =&gt; &quot;John Doe&quot;</pre>
+					
+
+					
+					<div class="method-source-code"
+						id="contains-user--source">
+<pre>
+     <span class="ruby-comment cmt"># File lib/retreval/gold_standard.rb, line 229</span>
+229:     <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">contains_user?</span>(<span class="ruby-identifier">args</span>)
+230:       <span class="ruby-identifier">user_id</span> = <span class="ruby-identifier">args</span>[<span class="ruby-value">:id</span>]
+231:       <span class="ruby-ivar">@users</span>.<span class="ruby-identifier">key?</span> <span class="ruby-identifier">user_id</span>
+232:     <span class="ruby-keyword kw">end</span></pre>
+					</div>
+					
+				</div>
+
+				
+
+				
+			</div>
+
+		
+			<div id="kappa-method" class="method-detail ">
+				<a name="method-i-kappa"></a>
+
+				<div class="method-heading">
+				
+					<span class="method-name">kappa</span><span
+						class="method-args">()</span>
+					<span class="method-click-advice">click to toggle source</span>
+				
+				</div>
+
+				<div class="method-description">
+					
+					<p>
+Calculates and returns the Kappa measure for this <a
+href="GoldStandard.html">GoldStandard</a>. It shows to which degree the
+judges agree in their decisions See: <a
+href="http://nlp.stanford.edu/IR-book/html/htmledition/assessing-relevance-1.html">nlp.stanford.edu/IR-book/html/htmledition/assessing-relevance-1.html</a>
+</p>
+					
+
+					
+					<div class="method-source-code"
+						id="kappa-source">
+<pre>
+     <span class="ruby-comment cmt"># File lib/retreval/gold_standard.rb, line 238</span>
+238:     <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">kappa</span>
+239:       
+240:       <span class="ruby-comment cmt"># TODO This isn't very pretty, maybe there's a more ruby-esque way to do this?</span>
+241:       <span class="ruby-identifier">sum</span> = <span class="ruby-value">0</span>
+242:       <span class="ruby-identifier">count</span> = <span class="ruby-value">0</span>
+243:       
+244:       <span class="ruby-comment cmt"># A repeated_combination yields all the pairwise combinations of</span>
+245:       <span class="ruby-comment cmt"># users to generate the pairwise kappa statistic. Elements are also</span>
+246:       <span class="ruby-comment cmt"># paired with themselves, so we need to remove those.</span>
+247:       <span class="ruby-ivar">@users</span>.<span class="ruby-identifier">values</span>.<span class="ruby-identifier">repeated_combination</span>(<span class="ruby-value">2</span>) <span class="ruby-keyword kw">do</span> <span class="ruby-operator">|</span><span class="ruby-identifier">combination</span><span class="ruby-operator">|</span>
+248:         <span class="ruby-identifier">user1</span>, <span class="ruby-identifier">user2</span> = <span class="ruby-identifier">combination</span>[<span class="ruby-value">0</span>], <span class="ruby-identifier">combination</span>[<span class="ruby-value">1</span>]
+249:         <span class="ruby-keyword kw">unless</span> <span class="ruby-identifier">user1</span> <span class="ruby-operator">==</span> <span class="ruby-identifier">user2</span>
+250:           <span class="ruby-identifier">kappa</span> = <span class="ruby-identifier">pairwise_kappa</span>(<span class="ruby-identifier">user1</span>, <span class="ruby-identifier">user2</span>)
+251:           <span class="ruby-keyword kw">unless</span> <span class="ruby-identifier">kappa</span>.<span class="ruby-identifier">nil?</span>
+252:             <span class="ruby-identifier">puts</span> <span class="ruby-node">&quot;Kappa for User #{user1.id} and #{user2.id}: #{kappa}&quot;</span> <span class="ruby-keyword kw">if</span> <span class="ruby-identifier">$verbose</span>
+253:             <span class="ruby-identifier">sum</span> <span class="ruby-operator">+=</span> <span class="ruby-identifier">kappa</span> <span class="ruby-keyword kw">unless</span> <span class="ruby-identifier">kappa</span>.<span class="ruby-identifier">nil?</span>
+254:             <span class="ruby-identifier">count</span> <span class="ruby-operator">+=</span> <span class="ruby-value">1</span>
+255:           <span class="ruby-keyword kw">end</span>
+256:         <span class="ruby-keyword kw">end</span>
+257:       <span class="ruby-keyword kw">end</span>
+258:       
+259:       <span class="ruby-ivar">@kappa</span> = <span class="ruby-identifier">sum</span> <span class="ruby-operator">/</span> <span class="ruby-identifier">count</span>.<span class="ruby-identifier">to_f</span>
+260:       <span class="ruby-identifier">puts</span> <span class="ruby-node">&quot;Average pairwise kappa: #{@kappa}&quot;</span> <span class="ruby-keyword kw">if</span> <span class="ruby-identifier">$verbose</span>
+261:       <span class="ruby-keyword kw">return</span> <span class="ruby-ivar">@kappa</span>
+262:     <span class="ruby-keyword kw">end</span></pre>
+					</div>
+					
+				</div>
+
+				
+
+				
+			</div>
+
+		
+			<div id="load-from-plaintext-file-method" class="method-detail ">
+				<a name="method-i-load_from_plaintext_file"></a>
+
+				<div class="method-heading">
+				
+					<span class="method-name">load_from_plaintext_file</span><span
+						class="method-args">(file)</span>
+					<span class="method-click-advice">click to toggle source</span>
+				
+				</div>
+
+				<div class="method-description">
+					
+					<p>
+Parses a plaintext file adhering to the following standard: Every line of
+text should include a triple that designates the judgement. The symbols
+should be separated by a tabulator. E.g.
+</p>
+<pre>
+  my_query        my_document_1     false
+  my_query        my_document_2     true
+</pre>
+<p>
+You can also add the user&#8217;s ID in the fourth column.
+</p>
+					
+
+					
+					<div class="method-source-code"
+						id="load-from-plaintext-file-source">
+<pre>
+     <span class="ruby-comment cmt"># File lib/retreval/gold_standard.rb, line 96</span>
+ 96:     <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">load_from_plaintext_file</span>(<span class="ruby-identifier">file</span>)
+ 97:       <span class="ruby-keyword kw">begin</span>
+ 98:         <span class="ruby-constant">File</span>.<span class="ruby-identifier">open</span>(<span class="ruby-identifier">file</span>).<span class="ruby-identifier">each</span> <span class="ruby-keyword kw">do</span> <span class="ruby-operator">|</span><span class="ruby-identifier">line</span><span class="ruby-operator">|</span>
+ 99:           <span class="ruby-identifier">line</span>.<span class="ruby-identifier">chomp!</span>
+100:           <span class="ruby-identifier">info</span> = <span class="ruby-identifier">line</span>.<span class="ruby-identifier">split</span>(<span class="ruby-value str">&quot;\t&quot;</span>)
+101:           <span class="ruby-keyword kw">if</span> <span class="ruby-identifier">info</span>.<span class="ruby-identifier">length</span> <span class="ruby-operator">==</span> <span class="ruby-value">3</span>
+102:             <span class="ruby-identifier">add_judgement</span> <span class="ruby-value">:query</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-identifier">info</span>[<span class="ruby-value">0</span>], <span class="ruby-value">:document</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-identifier">info</span>[<span class="ruby-value">1</span>], <span class="ruby-value">:relevant</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-identifier">info</span>[<span class="ruby-value">2</span>]
+103:           <span class="ruby-keyword kw">elsif</span> <span class="ruby-identifier">info</span>.<span class="ruby-identifier">length</span> <span class="ruby-operator">==</span> <span class="ruby-value">4</span>
+104:             <span class="ruby-identifier">add_judgement</span> <span class="ruby-value">:query</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-identifier">info</span>[<span class="ruby-value">0</span>], <span class="ruby-value">:document</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-identifier">info</span>[<span class="ruby-value">1</span>], <span class="ruby-value">:relevant</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-identifier">info</span>[<span class="ruby-value">2</span>], <span class="ruby-value">:user</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-identifier">info</span>[<span class="ruby-value">3</span>]
+105:           <span class="ruby-keyword kw">end</span>
+106:         <span class="ruby-keyword kw">end</span>
+107:       <span class="ruby-keyword kw">rescue</span> <span class="ruby-constant">Exception</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-identifier">e</span>
+108:         <span class="ruby-identifier">raise</span> <span class="ruby-value str">&quot;Error while parsing the document: &quot;</span> <span class="ruby-operator">+</span> <span class="ruby-identifier">e</span>.<span class="ruby-identifier">message</span>
+109:       <span class="ruby-keyword kw">end</span>
+110:     <span class="ruby-keyword kw">end</span></pre>
+					</div>
+					
+				</div>
+
+				
+
+				
+			</div>
+
+		
+			<div id="load-from-yaml-file-method" class="method-detail ">
+				<a name="method-i-load_from_yaml_file"></a>
+
+				<div class="method-heading">
+				
+					<span class="method-name">load_from_yaml_file</span><span
+						class="method-args">(file)</span>
+					<span class="method-click-advice">click to toggle source</span>
+				
+				</div>
+
+				<div class="method-description">
+					
+					<p>
+Parses a YAML file adhering to the following generic standard:
+</p>
+<ul>
+<li><p>
+&#8220;query&#8221;       denotes the query
+</p>
+</li>
+<li><p>
+&#8220;documents&#8221;   these are the documents judged for this query
+</p>
+</li>
+<li><p>
+&#8220;id&#8221;          the ID of the document (e.g. its filename, etc.)
+</p>
+</li>
+<li><p>
+&#8220;judgements&#8221;  an array of judgements, each one with:
+</p>
+</li>
+<li><p>
+&#8220;relevant&#8221;    a boolean value of the judgment (relevant or not)
+</p>
+</li>
+<li><p>
+&#8220;user&#8221;        an optional identifier of the user
+</p>
+</li>
+</ul>
+<p>
+Example file:
+</p>
+<pre>
+    * query: 12th air force germany 1957
+      documents:
+      * id: g5701s.ict21311
+        judgements: []
+
+      * id: g5701s.ict21313
+        judgements: 
+        * relevant: false
+          user: 2</pre>
+					
+
+					
+					<div class="method-source-code"
+						id="load-from-yaml-file-source">
+<pre>
+    <span class="ruby-comment cmt"># File lib/retreval/gold_standard.rb, line 53</span>
+53:     <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">load_from_yaml_file</span>(<span class="ruby-identifier">file</span>)
+54:       <span class="ruby-keyword kw">begin</span>
+55:         <span class="ruby-identifier">ydoc</span> = <span class="ruby-constant">YAML</span>.<span class="ruby-identifier">load</span>(<span class="ruby-constant">File</span>.<span class="ruby-identifier">open</span>(<span class="ruby-identifier">file</span>, <span class="ruby-value str">&quot;r&quot;</span>))
+56:         <span class="ruby-identifier">ydoc</span>.<span class="ruby-identifier">each</span> <span class="ruby-keyword kw">do</span> <span class="ruby-operator">|</span><span class="ruby-identifier">entry</span><span class="ruby-operator">|</span>
+57:           
+58:           <span class="ruby-comment cmt"># The query is first in the hierarchy</span>
+59:           <span class="ruby-identifier">query</span> = <span class="ruby-identifier">entry</span>[<span class="ruby-value str">&quot;query&quot;</span>]
+60: 
+61:           <span class="ruby-comment cmt"># Every query contains several documents</span>
+62:           <span class="ruby-identifier">documents</span> = <span class="ruby-identifier">entry</span>[<span class="ruby-value str">&quot;documents&quot;</span>]
+63:           <span class="ruby-identifier">documents</span>.<span class="ruby-identifier">each</span> <span class="ruby-keyword kw">do</span> <span class="ruby-operator">|</span><span class="ruby-identifier">doc</span><span class="ruby-operator">|</span>
+64:             
+65:             <span class="ruby-identifier">document</span> = <span class="ruby-identifier">doc</span>[<span class="ruby-value str">&quot;id&quot;</span>]
+66:             
+67:             <span class="ruby-comment cmt"># Only count the map if it has judgements</span>
+68:             <span class="ruby-keyword kw">if</span> <span class="ruby-identifier">doc</span>[<span class="ruby-value str">&quot;judgements&quot;</span>].<span class="ruby-identifier">empty?</span>  
+69:               <span class="ruby-identifier">add_judgement</span> <span class="ruby-value">:document</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-identifier">document</span>, <span class="ruby-value">:query</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-identifier">query</span>, <span class="ruby-value">:relevant</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-keyword kw">nil</span>, <span class="ruby-value">:user</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-keyword kw">nil</span>
+70:             <span class="ruby-keyword kw">else</span>
+71:               <span class="ruby-identifier">doc</span>[<span class="ruby-value str">&quot;judgements&quot;</span>].<span class="ruby-identifier">each</span> <span class="ruby-keyword kw">do</span> <span class="ruby-operator">|</span><span class="ruby-identifier">judgement</span><span class="ruby-operator">|</span>
+72:                 <span class="ruby-identifier">relevant</span> = <span class="ruby-identifier">judgement</span>[<span class="ruby-value str">&quot;relevant&quot;</span>]
+73:                 <span class="ruby-identifier">user</span> = <span class="ruby-identifier">judgement</span>[<span class="ruby-value str">&quot;user&quot;</span>]
+74:                 
+75:                 <span class="ruby-identifier">add_judgement</span> <span class="ruby-value">:document</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-identifier">document</span>, <span class="ruby-value">:query</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-identifier">query</span>, <span class="ruby-value">:relevant</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-identifier">relevant</span>, <span class="ruby-value">:user</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-identifier">user</span>
+76:               <span class="ruby-keyword kw">end</span>
+77:             <span class="ruby-keyword kw">end</span>
+78:             
+79:           <span class="ruby-keyword kw">end</span>
+80:         <span class="ruby-keyword kw">end</span>
+81: 
+82:       <span class="ruby-keyword kw">rescue</span> <span class="ruby-constant">Exception</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-identifier">e</span>
+83:         <span class="ruby-identifier">raise</span> <span class="ruby-value str">&quot;Error while parsing the YAML document: &quot;</span> <span class="ruby-operator">+</span> <span class="ruby-identifier">e</span>.<span class="ruby-identifier">message</span>
+84:       <span class="ruby-keyword kw">end</span>
+85:     <span class="ruby-keyword kw">end</span></pre>
+					</div>
+					
+				</div>
+
+				
+
+				
+			</div>
+
+		
+			<div id="relevant--method" class="method-detail ">
+				<a name="method-i-relevant%3F"></a>
+
+				<div class="method-heading">
+				
+					<span class="method-name">relevant?</span><span
+						class="method-args">(args)</span>
+					<span class="method-click-advice">click to toggle source</span>
+				
+				</div>
+
+				<div class="method-description">
+					
+					<p>
+Returns true if a <a href="Document.html">Document</a> is relevant for a <a
+href="Query.html">Query</a>, according to this <a
+href="GoldStandard.html">GoldStandard</a>. Called by:
+</p>
+<pre>
+    relevant? :document =&gt; &quot;document ID&quot;, :query =&gt; &quot;query&quot;</pre>
+					
+
+					
+					<div class="method-source-code"
+						id="relevant--source">
+<pre>
+     <span class="ruby-comment cmt"># File lib/retreval/gold_standard.rb, line 170</span>
+170:     <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">relevant?</span>(<span class="ruby-identifier">args</span>)
+171:       <span class="ruby-identifier">query</span> = <span class="ruby-constant">Query</span>.<span class="ruby-identifier">new</span> <span class="ruby-value">:querystring</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-identifier">args</span>[<span class="ruby-value">:query</span>]
+172:       <span class="ruby-identifier">document</span> = <span class="ruby-constant">Document</span>.<span class="ruby-identifier">new</span> <span class="ruby-value">:id</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-identifier">args</span>[<span class="ruby-value">:document</span>]
+173:       
+174:       <span class="ruby-identifier">relevant_count</span> = <span class="ruby-value">0</span>
+175:       <span class="ruby-identifier">nonrelevant_count</span> = <span class="ruby-value">0</span>
+176:       
+177:       <span class="ruby-comment cmt">#TODO: looks quite inefficient. Would a hash with document-query-pairs as key help?</span>
+178:       <span class="ruby-ivar">@judgements</span>.<span class="ruby-identifier">each</span> <span class="ruby-keyword kw">do</span> <span class="ruby-operator">|</span><span class="ruby-identifier">judgement</span><span class="ruby-operator">|</span>
+179:         <span class="ruby-keyword kw">if</span> <span class="ruby-identifier">judgement</span>.<span class="ruby-identifier">document</span> <span class="ruby-operator">==</span> <span class="ruby-identifier">document</span> <span class="ruby-keyword kw">and</span> <span class="ruby-identifier">judgement</span>.<span class="ruby-identifier">query</span> <span class="ruby-operator">==</span> <span class="ruby-identifier">query</span>
+180:           <span class="ruby-identifier">judgement</span>.<span class="ruby-identifier">relevant</span> <span class="ruby-operator">?</span> <span class="ruby-identifier">relevant_count</span> <span class="ruby-operator">+=</span> <span class="ruby-value">1</span> <span class="ruby-operator">:</span> <span class="ruby-identifier">nonrelevant_count</span> <span class="ruby-operator">+=</span> <span class="ruby-value">1</span>
+181:         <span class="ruby-keyword kw">end</span>
+182:       <span class="ruby-keyword kw">end</span>
+183:       
+184:       <span class="ruby-comment cmt"># If we didn't find any judgements, just leave it as false</span>
+185:       <span class="ruby-keyword kw">if</span> <span class="ruby-identifier">relevant_count</span> <span class="ruby-operator">==</span> <span class="ruby-value">0</span> <span class="ruby-keyword kw">and</span> <span class="ruby-identifier">relevant_count</span> <span class="ruby-operator">==</span> <span class="ruby-value">0</span>
+186:         <span class="ruby-keyword kw">false</span>
+187:       <span class="ruby-keyword kw">else</span>
+188:         <span class="ruby-identifier">relevant_count</span> <span class="ruby-operator">&gt;=</span> <span class="ruby-identifier">nonrelevant_count</span>
+189:       <span class="ruby-keyword kw">end</span>
+190:     <span class="ruby-keyword kw">end</span></pre>
+					</div>
+					
+				</div>
+
+				
+
+				
+			</div>
+
+		
+		</div>
+	
+		<div id="private-instance-method-details" class="method-section section">
+			<h3 class="section-header">Private Instance Methods</h3>
+
+		
+			<div id="pairwise-kappa-method" class="method-detail ">
+				<a name="method-i-pairwise_kappa"></a>
+
+				<div class="method-heading">
+				
+					<span class="method-name">pairwise_kappa</span><span
+						class="method-args">(user1, user2)</span>
+					<span class="method-click-advice">click to toggle source</span>
+				
+				</div>
+
+				<div class="method-description">
+					
+					<p>
+Calculates the pairwise kappa statistic for two users. The two users
+objects need at least one <a href="Judgement.html">Judgement</a> in common.
+Note that the kappa statistic is not really meaningful when there are too
+little judgements in common!
+</p>
+					
+
+					
+					<div class="method-source-code"
+						id="pairwise-kappa-source">
+<pre>
+     <span class="ruby-comment cmt"># File lib/retreval/gold_standard.rb, line 270</span>
+270:     <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">pairwise_kappa</span>(<span class="ruby-identifier">user1</span>, <span class="ruby-identifier">user2</span>)
+271:       
+272:       <span class="ruby-identifier">user1_judgements</span> = <span class="ruby-identifier">user1</span>.<span class="ruby-identifier">judgements</span>.<span class="ruby-identifier">reject</span> { <span class="ruby-operator">|</span><span class="ruby-identifier">judgement</span><span class="ruby-operator">|</span> <span class="ruby-keyword kw">not</span> <span class="ruby-identifier">user2</span>.<span class="ruby-identifier">judgements</span>.<span class="ruby-identifier">include?</span>(<span class="ruby-identifier">judgement</span>) }
+273:       <span class="ruby-identifier">user2_judgements</span> = <span class="ruby-identifier">user2</span>.<span class="ruby-identifier">judgements</span>.<span class="ruby-identifier">reject</span> { <span class="ruby-operator">|</span><span class="ruby-identifier">judgement</span><span class="ruby-operator">|</span> <span class="ruby-keyword kw">not</span> <span class="ruby-identifier">user1</span>.<span class="ruby-identifier">judgements</span>.<span class="ruby-identifier">include?</span>(<span class="ruby-identifier">judgement</span>) }
+274:       
+275:       <span class="ruby-identifier">total_count</span> = <span class="ruby-identifier">user1_judgements</span>.<span class="ruby-identifier">count</span>
+276:       
+277:       <span class="ruby-keyword kw">unless</span> <span class="ruby-identifier">user1_judgements</span>.<span class="ruby-identifier">empty?</span> <span class="ruby-keyword kw">or</span> <span class="ruby-identifier">user1_judgements</span>.<span class="ruby-identifier">empty?</span>
+278:         
+279:         <span class="ruby-identifier">positive_agreements</span> = <span class="ruby-value">0</span>     <span class="ruby-comment cmt"># =&gt; when both judges agree positively (relevant)</span>
+280:         <span class="ruby-identifier">negative_agreements</span> = <span class="ruby-value">0</span>     <span class="ruby-comment cmt"># =&gt; when both judges agree negatively (nonrelevant)</span>
+281:         <span class="ruby-identifier">negative_disagreements</span> = <span class="ruby-value">0</span>  <span class="ruby-comment cmt"># =&gt; when the second judge disagrees by using &quot;nonrelevant&quot;</span>
+282:         <span class="ruby-identifier">positive_disagreements</span> = <span class="ruby-value">0</span>  <span class="ruby-comment cmt"># =&gt; when the second judge disagrees by using &quot;relevant&quot;</span>
+283:         
+284:         <span class="ruby-keyword kw">for</span> <span class="ruby-identifier">i</span> <span class="ruby-keyword kw">in</span> <span class="ruby-value">0</span><span class="ruby-operator">..</span>(<span class="ruby-identifier">user1_judgements</span>.<span class="ruby-identifier">count</span><span class="ruby-operator">-</span><span class="ruby-value">1</span>)
+285:           <span class="ruby-keyword kw">if</span> <span class="ruby-identifier">user1_judgements</span>[<span class="ruby-identifier">i</span>].<span class="ruby-identifier">relevant</span> <span class="ruby-operator">==</span> <span class="ruby-keyword kw">true</span>
+286:             <span class="ruby-keyword kw">if</span> <span class="ruby-identifier">user2_judgements</span>[<span class="ruby-identifier">i</span>].<span class="ruby-identifier">relevant</span> <span class="ruby-operator">==</span> <span class="ruby-keyword kw">true</span>
+287:               <span class="ruby-identifier">positive_agreements</span> <span class="ruby-operator">+=</span> <span class="ruby-value">1</span>
+288:             <span class="ruby-keyword kw">else</span>
+289:               <span class="ruby-identifier">negative_disagreements</span> <span class="ruby-operator">+=</span> <span class="ruby-value">1</span>
+290:             <span class="ruby-keyword kw">end</span>
+291:           <span class="ruby-keyword kw">elsif</span> <span class="ruby-identifier">user1_judgements</span>[<span class="ruby-identifier">i</span>].<span class="ruby-identifier">relevant</span> <span class="ruby-operator">==</span> <span class="ruby-keyword kw">false</span>
+292:             <span class="ruby-keyword kw">if</span> <span class="ruby-identifier">user2_judgements</span>[<span class="ruby-identifier">i</span>].<span class="ruby-identifier">relevant</span> <span class="ruby-operator">==</span> <span class="ruby-keyword kw">false</span>
+293:               <span class="ruby-identifier">negative_agreements</span> <span class="ruby-operator">+=</span> <span class="ruby-value">1</span>
+294:             <span class="ruby-keyword kw">else</span>
+295:               <span class="ruby-identifier">positive_disagreements</span> <span class="ruby-operator">+=</span> <span class="ruby-value">1</span>
+296:             <span class="ruby-keyword kw">end</span>
+297:           <span class="ruby-keyword kw">end</span>
+298:         <span class="ruby-keyword kw">end</span>
+299:         
+300:         <span class="ruby-comment cmt"># The proportion the judges agreed:</span>
+301:         <span class="ruby-identifier">p_agreed</span> = (<span class="ruby-identifier">positive_agreements</span> <span class="ruby-operator">+</span> <span class="ruby-identifier">negative_agreements</span>) <span class="ruby-operator">/</span> <span class="ruby-identifier">total_count</span>.<span class="ruby-identifier">to_f</span>
+302:         
+303:         <span class="ruby-comment cmt"># The pooled marginals:</span>
+304:         <span class="ruby-identifier">p_nonrelevant</span> = (<span class="ruby-identifier">positive_disagreements</span> <span class="ruby-operator">+</span> <span class="ruby-identifier">negative_agreements</span> * <span class="ruby-value">2</span> <span class="ruby-operator">+</span> <span class="ruby-identifier">negative_disagreements</span>) <span class="ruby-operator">/</span> (<span class="ruby-identifier">total_count</span>.<span class="ruby-identifier">to_f</span> * <span class="ruby-value">2</span>)
+305:         <span class="ruby-comment cmt"># This one is the opposite of P(nonrelevant):</span>
+306:         <span class="ruby-comment cmt"># p_relevant = (positive_agreements * 2 + negative_disagreements + positive_disagreements) / (total_count.to_f * 2)</span>
+307:         <span class="ruby-identifier">p_relevant</span> = <span class="ruby-value">1</span> <span class="ruby-operator">-</span> <span class="ruby-identifier">p_nonrelevant</span>
+308:         
+309:         <span class="ruby-comment cmt"># The probability that the judges agreed by chance</span>
+310:         <span class="ruby-identifier">p_agreement_by_chance</span> = <span class="ruby-identifier">p_nonrelevant</span> <span class="ruby-operator">**</span> <span class="ruby-value">2</span> <span class="ruby-operator">+</span> <span class="ruby-identifier">p_relevant</span> <span class="ruby-operator">**</span> <span class="ruby-value">2</span>
+311:         
+312:         
+313:         <span class="ruby-comment cmt"># Finally, the pairwise kappa value</span>
+314:         <span class="ruby-comment cmt"># If there'd be a division by zero, we avoid it and return 0 right away</span>
+315:         <span class="ruby-keyword kw">if</span> <span class="ruby-identifier">p_agreed</span> <span class="ruby-operator">-</span> <span class="ruby-identifier">p_agreement_by_chance</span> <span class="ruby-operator">==</span> <span class="ruby-value">0</span>
+316:           <span class="ruby-keyword kw">return</span> <span class="ruby-value">0</span>
+317:         <span class="ruby-comment cmt"># In any other case, the kappa value is correct and we can return it</span>
+318:         <span class="ruby-keyword kw">else</span>
+319:           <span class="ruby-identifier">kappa</span> = (<span class="ruby-identifier">p_agreed</span> <span class="ruby-operator">-</span> <span class="ruby-identifier">p_agreement_by_chance</span>) <span class="ruby-operator">/</span> (<span class="ruby-value">1</span> <span class="ruby-operator">-</span> <span class="ruby-identifier">p_agreement_by_chance</span>)
+320:           <span class="ruby-keyword kw">return</span> <span class="ruby-identifier">kappa</span>
+321:         <span class="ruby-keyword kw">end</span>
+322:       <span class="ruby-keyword kw">end</span>
+323:       
+324:       <span class="ruby-comment cmt"># If there are no common judgements, there is no kappa value to calculate</span>
+325:       <span class="ruby-keyword kw">return</span> <span class="ruby-keyword kw">nil</span>
+326:     <span class="ruby-keyword kw">end</span></pre>
+					</div>
+					
+				</div>
+
+				
+
+				
+			</div>
+
+		
+		</div>
+	
+
+	</div>
+
+
+	<div id="rdoc-debugging-section-dump" class="debugging-section">
+	
+		<p>Disabled; run with --debug to generate this.</p>
+	
+	</div>
+
+	<div id="validator-badges">
+		<p><small><a href="http://validator.w3.org/check/referer">[Validate]</a></small></p>
+		<p><small>Generated with the <a href="http://deveiate.org/projects/Darkfish-Rdoc/">Darkfish
+			Rdoc Generator</a> 1.1.6</small>.</p>
+	</div>
+
+</body>
+</html>
+

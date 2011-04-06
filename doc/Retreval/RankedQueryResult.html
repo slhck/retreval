@@ -1,0 +1,556 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+	"http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+	<meta content="text/html; charset=utf-8" http-equiv="Content-Type" />
+
+	<title>Class: Retreval::RankedQueryResult</title>
+
+	<link rel="stylesheet" href="../rdoc.css" type="text/css" media="screen" />
+
+	<script src="../js/jquery.js" type="text/javascript"
+		charset="utf-8"></script>
+	<script src="../js/thickbox-compressed.js" type="text/javascript"
+		charset="utf-8"></script>
+	<script src="../js/quicksearch.js" type="text/javascript"
+		charset="utf-8"></script>
+	<script src="../js/darkfish.js" type="text/javascript"
+		charset="utf-8"></script>
+
+</head>
+<body class="class">
+
+	<div id="metadata">
+		<div id="home-metadata">
+			<div id="home-section" class="section">
+        <h3 class="section-header">
+          <a href="../index.html">Home</a>
+          <a href="../index.html#classes">Classes</a>
+          <a href="../index.html#methods">Methods</a>
+        </h3>
+			</div>
+		</div>
+
+		<div id="file-metadata">
+			<div id="file-list-section" class="section">
+				<h3 class="section-header">In Files</h3>
+				<div class="section-body">
+					<ul>
+					
+						<li><a href="../lib/retreval/query_result_rb.html?TB_iframe=true&amp;height=550&amp;width=785"
+							class="thickbox" title="lib/retreval/query_result.rb">lib/retreval/query_result.rb</a></li>
+					
+					</ul>
+				</div>
+			</div>
+
+			
+		</div>
+
+		<div id="class-metadata">
+
+			<!-- Parent Class -->
+			
+			<div id="parent-class-section" class="section">
+				<h3 class="section-header">Parent</h3>
+				
+				<p class="link"><a href="QueryResult.html">Retreval::QueryResult</a></p>
+				
+			</div>
+			
+
+			<!-- Namespace Contents -->
+			
+
+			<!-- Method Quickref -->
+			
+			<div id="method-list-section" class="section">
+				<h3 class="section-header">Methods</h3>
+				<ul class="link-list">
+					
+					<li><a href="#method-c-new">::new</a></li>
+					
+					<li><a href="#method-i-average_precision">#average_precision</a></li>
+					
+					<li><a href="#method-i-eleven_point_precision">#eleven_point_precision</a></li>
+					
+					<li><a href="#method-i-print_eleven_point_precision_table">#print_eleven_point_precision_table</a></li>
+					
+					<li><a href="#method-i-print_ranked_table">#print_ranked_table</a></li>
+					
+					<li><a href="#method-i-statistics">#statistics</a></li>
+					
+				</ul>
+			</div>
+			
+
+			<!-- Included Modules -->
+			
+		</div>
+
+		<div id="project-metadata">
+			
+			
+			<div id="fileindex-section" class="section project-section">
+				<h3 class="section-header">Files</h3>
+				<ul>
+				
+					<li class="file"><a href="../CHANGELOG.html">CHANGELOG</a></li>
+				
+					<li class="file"><a href="../TODO.html">TODO</a></li>
+				
+				</ul>
+			</div>
+			
+
+			<div id="classindex-section" class="section project-section">
+				<h3 class="section-header">Class Index
+					<span class="search-toggle"><img src="../images/find.png"
+						height="16" width="16" alt="[+]"
+						title="show/hide quicksearch" /></span></h3>
+				<form action="#" method="get" accept-charset="utf-8" class="initially-hidden">
+				<fieldset>
+					<legend>Quicksearch</legend>
+					<input type="text" name="quicksearch" value=""
+						class="quicksearch-field" />
+				</fieldset>
+				</form>
+
+				<ul class="link-list">
+				
+					<li><a href="../Retreval.html">Retreval</a></li>
+				
+					<li><a href="../Retreval/Document.html">Retreval::Document</a></li>
+				
+					<li><a href="../Retreval/GoldStandard.html">Retreval::GoldStandard</a></li>
+				
+					<li><a href="../Retreval/Judgement.html">Retreval::Judgement</a></li>
+				
+					<li><a href="../Retreval/Options.html">Retreval::Options</a></li>
+				
+					<li><a href="../Retreval/Query.html">Retreval::Query</a></li>
+				
+					<li><a href="../Retreval/QueryResult.html">Retreval::QueryResult</a></li>
+				
+					<li><a href="../Retreval/QueryResultSet.html">Retreval::QueryResultSet</a></li>
+				
+					<li><a href="../Retreval/RankedQueryResult.html">Retreval::RankedQueryResult</a></li>
+				
+					<li><a href="../Retreval/ResultDocument.html">Retreval::ResultDocument</a></li>
+				
+					<li><a href="../Retreval/Runner.html">Retreval::Runner</a></li>
+				
+					<li><a href="../Retreval/UnrankedQueryResult.html">Retreval::UnrankedQueryResult</a></li>
+				
+					<li><a href="../Retreval/User.html">Retreval::User</a></li>
+				
+					<li><a href="../TestGoldStandard.html">TestGoldStandard</a></li>
+				
+					<li><a href="../TestQueryResult.html">TestQueryResult</a></li>
+				
+				</ul>
+				<div id="no-class-search-results" style="display: none;">No matching classes.</div>
+			</div>
+
+			
+		</div>
+	</div>
+
+	<div id="documentation">
+		<h1 class="class">Retreval::RankedQueryResult</h1>
+
+		<div id="description">
+			<p>
+A <a href="RankedQueryResult.html">RankedQueryResult</a> is a <a
+href="QueryResult.html">QueryResult</a> with special functions  for ranked
+retrieval evaluation.
+</p>
+
+		</div>
+
+		<!-- Constants -->
+		
+
+		<!-- Attributes -->
+		
+
+		<!-- Methods -->
+		
+		<div id="public-class-method-details" class="method-section section">
+			<h3 class="section-header">Public Class Methods</h3>
+
+		
+			<div id="new-method" class="method-detail ">
+				<a name="method-c-new"></a>
+
+				<div class="method-heading">
+				
+					<span class="method-name">new</span><span
+						class="method-args">(args)</span>
+					<span class="method-click-advice">click to toggle source</span>
+				
+				</div>
+
+				<div class="method-description">
+					
+					<p>
+Creates a new <a href="RankedQueryResult.html">RankedQueryResult</a>. One
+has to specify the query string and can optionally pass a <a
+href="Document.html">Document</a> array too. The rank of the <a
+href="Document.html">Document</a> will be defined by its position in the
+array only. Called by:
+</p>
+<pre>
+    RankedQueryResult.new :documents =&gt; array_of_document_ids, :query =&gt; &quot;my query&quot;
+    RankedQueryResult.new :query =&gt; &quot;my query&quot;</pre>
+					
+
+					
+					<div class="method-source-code"
+						id="new-source">
+<pre>
+     <span class="ruby-comment cmt"># File lib/retreval/query_result.rb, line 319</span>
+319:     <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">initialize</span>(<span class="ruby-identifier">args</span>)
+320:       <span class="ruby-keyword kw">super</span>(<span class="ruby-identifier">args</span>)
+321:     <span class="ruby-keyword kw">end</span></pre>
+					</div>
+					
+				</div>
+
+				
+
+				
+			</div>
+
+		
+		</div>
+	
+		<div id="public-instance-method-details" class="method-section section">
+			<h3 class="section-header">Public Instance Methods</h3>
+
+		
+			<div id="average-precision-method" class="method-detail ">
+				<a name="method-i-average_precision"></a>
+
+				<div class="method-heading">
+				
+					<span class="method-name">average_precision</span><span
+						class="method-args">()</span>
+					<span class="method-click-advice">click to toggle source</span>
+				
+				</div>
+
+				<div class="method-description">
+					
+					<p>
+Returns the average precision. It is the average of precisions computed at 
+the point of each of the relevant documents in the ranked sequence.
+</p>
+					
+
+					
+					<div class="method-source-code"
+						id="average-precision-source">
+<pre>
+     <span class="ruby-comment cmt"># File lib/retreval/query_result.rb, line 417</span>
+417:     <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">average_precision</span>
+418:       <span class="ruby-keyword kw">begin</span>
+419:         <span class="ruby-comment cmt"># Calculate the results first if we haven't done this before</span>
+420:         <span class="ruby-identifier">statistics</span> <span class="ruby-keyword kw">unless</span> <span class="ruby-ivar">@calculated</span>
+421:         
+422:         <span class="ruby-identifier">total_relevant_documents</span> = <span class="ruby-ivar">@gold_standard</span>.<span class="ruby-identifier">documents</span>.<span class="ruby-identifier">values</span>.<span class="ruby-identifier">count</span> { <span class="ruby-operator">|</span><span class="ruby-identifier">doc</span><span class="ruby-operator">|</span> <span class="ruby-ivar">@gold_standard</span>.<span class="ruby-identifier">relevant?</span> <span class="ruby-value">:document</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-identifier">doc</span>.<span class="ruby-identifier">id</span>, <span class="ruby-value">:query</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-ivar">@query</span>.<span class="ruby-identifier">querystring</span>  }
+423:         
+424:         <span class="ruby-keyword kw">if</span> <span class="ruby-identifier">total_relevant_documents</span> <span class="ruby-operator">&gt;</span> <span class="ruby-value">0</span>
+425:           <span class="ruby-comment cmt"># The sum is calculated by adding the precision for a relevant document, or 0 for a nonrelevant document</span>
+426:           <span class="ruby-keyword kw">return</span> <span class="ruby-ivar">@average_precision</span> = <span class="ruby-ivar">@results</span>.<span class="ruby-identifier">inject</span>(<span class="ruby-value">0.0</span>) { <span class="ruby-operator">|</span><span class="ruby-identifier">sum</span>, <span class="ruby-identifier">document</span><span class="ruby-operator">|</span> <span class="ruby-identifier">document</span>[<span class="ruby-value">:relevant</span>] <span class="ruby-operator">?</span> <span class="ruby-identifier">document</span>[<span class="ruby-value">:precision</span>] <span class="ruby-operator">+</span> <span class="ruby-identifier">sum</span> <span class="ruby-operator">:</span> <span class="ruby-identifier">sum</span> } <span class="ruby-operator">/</span> <span class="ruby-identifier">total_relevant_documents</span>
+427:         <span class="ruby-keyword kw">else</span>
+428:           <span class="ruby-keyword kw">return</span> <span class="ruby-ivar">@average_precision</span> = <span class="ruby-value">0</span>
+429:         <span class="ruby-keyword kw">end</span>
+430:       <span class="ruby-keyword kw">rescue</span> <span class="ruby-constant">Exception</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-identifier">e</span>
+431:         <span class="ruby-identifier">raise</span> <span class="ruby-value str">&quot;Error while calculating average precision: &quot;</span> <span class="ruby-operator">+</span> <span class="ruby-identifier">e</span>.<span class="ruby-identifier">message</span>
+432:       <span class="ruby-keyword kw">end</span>
+433:       
+434:     <span class="ruby-keyword kw">end</span></pre>
+					</div>
+					
+				</div>
+
+				
+
+				
+			</div>
+
+		
+			<div id="eleven-point-precision-method" class="method-detail ">
+				<a name="method-i-eleven_point_precision"></a>
+
+				<div class="method-heading">
+				
+					<span class="method-name">eleven_point_precision</span><span
+						class="method-args">()</span>
+					<span class="method-click-advice">click to toggle source</span>
+				
+				</div>
+
+				<div class="method-description">
+					
+					<p>
+Calculates the 11-point precision and the average interpolated precision.
+See: <a
+href="http://nlp.stanford.edu/IR-book/html/htmledition/evaluation-of-ranked-retrieval-results-1.html">nlp.stanford.edu/IR-book/html/htmledition/evaluation-of-ranked-retrieval-results-1.html</a>
+</p>
+					
+
+					
+					<div class="method-source-code"
+						id="eleven-point-precision-source">
+<pre>
+     <span class="ruby-comment cmt"># File lib/retreval/query_result.rb, line 326</span>
+326:     <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">eleven_point_precision</span>
+327:       
+328:       <span class="ruby-identifier">statistics</span> <span class="ruby-keyword kw">unless</span> <span class="ruby-ivar">@calculated</span>
+329: 
+330:       <span class="ruby-ivar">@recall_levels</span> = <span class="ruby-constant">Hash</span>.<span class="ruby-identifier">new</span>
+331: 
+332:       <span class="ruby-comment cmt"># Find out what recall/precision pairs we already know</span>
+333:       <span class="ruby-ivar">@results</span>.<span class="ruby-identifier">each_with_index</span> <span class="ruby-keyword kw">do</span> <span class="ruby-operator">|</span><span class="ruby-identifier">row</span>, <span class="ruby-identifier">index</span><span class="ruby-operator">|</span>
+334:         <span class="ruby-identifier">precision</span> = <span class="ruby-identifier">row</span>[<span class="ruby-value">:precision</span>]
+335:         <span class="ruby-identifier">recall</span> = <span class="ruby-identifier">row</span>[<span class="ruby-value">:recall</span>]
+336:         <span class="ruby-ivar">@recall_levels</span>[<span class="ruby-identifier">recall</span>] = <span class="ruby-identifier">precision</span>
+337:       <span class="ruby-keyword kw">end</span>
+338: 
+339:       <span class="ruby-keyword kw">begin</span>
+340:         <span class="ruby-ivar">@eleven_point_precision</span> = <span class="ruby-constant">Hash</span>.<span class="ruby-identifier">new</span>
+341: 
+342:         <span class="ruby-comment cmt"># Calculate the 11 points</span>
+343:         <span class="ruby-comment cmt"># This outer loop effectively iterates from 0.0 to 1.0</span>
+344:         (<span class="ruby-value">0</span><span class="ruby-operator">..</span><span class="ruby-value">10</span>).<span class="ruby-identifier">each_with_index</span> <span class="ruby-keyword kw">do</span> <span class="ruby-operator">|</span><span class="ruby-identifier">recall_level</span>, <span class="ruby-identifier">index</span><span class="ruby-operator">|</span>
+345:           <span class="ruby-identifier">recall_level</span> = <span class="ruby-identifier">recall_level</span>.<span class="ruby-identifier">to_f</span> <span class="ruby-operator">/</span> <span class="ruby-value">10</span>
+346:           <span class="ruby-ivar">@eleven_point_precision</span>[<span class="ruby-identifier">recall_level</span>] = <span class="ruby-value">0</span>
+347: 
+348:           <span class="ruby-comment cmt"># Look in our known recall levels (stored as the keys)</span>
+349:           <span class="ruby-ivar">@recall_levels</span>.<span class="ruby-identifier">keys</span>.<span class="ruby-identifier">each</span> <span class="ruby-keyword kw">do</span> <span class="ruby-operator">|</span><span class="ruby-identifier">key</span><span class="ruby-operator">|</span>
+350:             
+351:             <span class="ruby-comment cmt"># If we find a known recall equal or higher to the one from the 11-point</span>
+352:             <span class="ruby-comment cmt"># scale, return the precision at that level</span>
+353:             <span class="ruby-comment cmt"># E.g. if our level is 0.3 and we have a known precision at 0.5, this</span>
+354:             <span class="ruby-comment cmt"># one will be used as our interpolated precision</span>
+355:             <span class="ruby-keyword kw">if</span> <span class="ruby-identifier">key</span> <span class="ruby-operator">&gt;=</span> <span class="ruby-identifier">recall_level</span>
+356:               <span class="ruby-identifier">precision_for_level</span> = <span class="ruby-ivar">@recall_levels</span>[<span class="ruby-identifier">key</span>]
+357:               <span class="ruby-comment cmt"># Store the interpolated precision at the current level, e.g. 0.3</span>
+358:               <span class="ruby-ivar">@eleven_point_precision</span>[<span class="ruby-identifier">recall_level</span>] = <span class="ruby-identifier">precision_for_level</span>
+359:               <span class="ruby-keyword kw">break</span>
+360:             <span class="ruby-keyword kw">end</span>
+361:           <span class="ruby-keyword kw">end</span>
+362:         <span class="ruby-keyword kw">end</span>
+363: 
+364:         <span class="ruby-comment cmt"># Now calculate an average precision for this statistic</span>
+365:         <span class="ruby-comment cmt"># That's a neat line of ruby code, is it?</span>
+366:         <span class="ruby-ivar">@eleven_point_average</span> = <span class="ruby-ivar">@eleven_point_precision</span>.<span class="ruby-identifier">values</span>.<span class="ruby-identifier">inject</span>(<span class="ruby-value">0.0</span>) { <span class="ruby-operator">|</span><span class="ruby-identifier">sum</span>, <span class="ruby-identifier">precision</span><span class="ruby-operator">|</span> <span class="ruby-identifier">sum</span> <span class="ruby-operator">+</span> <span class="ruby-identifier">precision</span> } <span class="ruby-operator">/</span> <span class="ruby-value">11</span>
+367:         
+368:       <span class="ruby-keyword kw">rescue</span>
+369:         <span class="ruby-identifier">raise</span> <span class="ruby-value str">&quot;Error while calculating the 11-point precision map!&quot;</span>
+370:       <span class="ruby-keyword kw">end</span>
+371: 
+372:       <span class="ruby-ivar">@eleven_point_precision</span>
+373:       
+374:     <span class="ruby-keyword kw">end</span></pre>
+					</div>
+					
+				</div>
+
+				
+
+				
+			</div>
+
+		
+			<div id="print-eleven-point-precision-table-method" class="method-detail ">
+				<a name="method-i-print_eleven_point_precision_table"></a>
+
+				<div class="method-heading">
+				
+					<span class="method-name">print_eleven_point_precision_table</span><span
+						class="method-args">()</span>
+					<span class="method-click-advice">click to toggle source</span>
+				
+				</div>
+
+				<div class="method-description">
+					
+					<p>
+Prints a pretty table for 11-point interpolated precision
+</p>
+					
+
+					
+					<div class="method-source-code"
+						id="print-eleven-point-precision-table-source">
+<pre>
+     <span class="ruby-comment cmt"># File lib/retreval/query_result.rb, line 438</span>
+438:     <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">print_eleven_point_precision_table</span>
+439:       
+440:       <span class="ruby-comment cmt"># Calculate the results first if we haven't done this before</span>
+441:       <span class="ruby-identifier">statistics</span> <span class="ruby-keyword kw">unless</span> <span class="ruby-ivar">@calculated</span>
+442:       
+443:       <span class="ruby-identifier">data</span> = <span class="ruby-identifier">eleven_point_precision</span>
+444:       <span class="ruby-identifier">print</span> <span class="ruby-value str">&quot;Recall\tInterpolated Precision\n&quot;</span>
+445:       <span class="ruby-identifier">data</span>.<span class="ruby-identifier">each_pair</span> <span class="ruby-keyword kw">do</span> <span class="ruby-operator">|</span><span class="ruby-identifier">recall</span>, <span class="ruby-identifier">precision</span><span class="ruby-operator">|</span>
+446:         <span class="ruby-identifier">print</span> <span class="ruby-identifier">recall</span>.<span class="ruby-identifier">to_s</span> <span class="ruby-operator">+</span> <span class="ruby-value str">&quot;\t&quot;</span> <span class="ruby-operator">+</span> <span class="ruby-value str">&quot;%.3f&quot;</span> <span class="ruby-operator">%</span> <span class="ruby-identifier">precision</span> <span class="ruby-operator">+</span> <span class="ruby-value str">&quot;\n&quot;</span>
+447:       <span class="ruby-keyword kw">end</span>
+448:       <span class="ruby-identifier">print</span> <span class="ruby-value str">&quot;--------------------------------------\n&quot;</span>
+449:       <span class="ruby-identifier">print</span> <span class="ruby-value str">&quot;Avg.\t&quot;</span> <span class="ruby-operator">+</span> <span class="ruby-value str">&quot;%.3f&quot;</span> <span class="ruby-operator">%</span> <span class="ruby-ivar">@eleven_point_average</span> <span class="ruby-operator">+</span> <span class="ruby-value str">&quot;\n&quot;</span>
+450:       <span class="ruby-identifier">print</span> <span class="ruby-value str">&quot;\n&quot;</span>
+451:       
+452:     <span class="ruby-keyword kw">end</span></pre>
+					</div>
+					
+				</div>
+
+				
+
+				
+			</div>
+
+		
+			<div id="print-ranked-table-method" class="method-detail ">
+				<a name="method-i-print_ranked_table"></a>
+
+				<div class="method-heading">
+				
+					<span class="method-name">print_ranked_table</span><span
+						class="method-args">()</span>
+					<span class="method-click-advice">click to toggle source</span>
+				
+				</div>
+
+				<div class="method-description">
+					
+					<p>
+Prints a pretty table for ranked results
+</p>
+					
+
+					
+					<div class="method-source-code"
+						id="print-ranked-table-source">
+<pre>
+     <span class="ruby-comment cmt"># File lib/retreval/query_result.rb, line 456</span>
+456:     <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">print_ranked_table</span>
+457:       
+458:       <span class="ruby-comment cmt"># Calculate the results first if we haven't done this before</span>
+459:       <span class="ruby-identifier">statistics</span> <span class="ruby-keyword kw">unless</span> <span class="ruby-ivar">@calculated</span>
+460:             
+461:       <span class="ruby-comment cmt"># Use the results to print a table</span>
+462:       <span class="ruby-identifier">print</span> <span class="ruby-node">&quot;Query: #{@query.querystring}\n&quot;</span>
+463:       <span class="ruby-identifier">print</span> <span class="ruby-value str">&quot;Index\tRelevant\tPrecision\tRecall\tScore\t\tDocument ID\n&quot;</span>
+464:       <span class="ruby-ivar">@results</span>.<span class="ruby-identifier">each_with_index</span> <span class="ruby-keyword kw">do</span> <span class="ruby-operator">|</span><span class="ruby-identifier">row</span>, <span class="ruby-identifier">index</span><span class="ruby-operator">|</span>
+465:         <span class="ruby-identifier">precision</span> = <span class="ruby-value str">&quot;%.3f&quot;</span> <span class="ruby-operator">%</span> <span class="ruby-identifier">row</span>[<span class="ruby-value">:precision</span>]
+466:         <span class="ruby-identifier">document</span> = <span class="ruby-ivar">@documents</span>.<span class="ruby-identifier">values</span>[<span class="ruby-identifier">index</span>].<span class="ruby-identifier">id</span>
+467:         <span class="ruby-identifier">recall</span> = <span class="ruby-value str">&quot;%.3f&quot;</span> <span class="ruby-operator">%</span>  <span class="ruby-identifier">row</span>[<span class="ruby-value">:recall</span>]
+468:         <span class="ruby-identifier">relevant</span> = <span class="ruby-identifier">row</span>[<span class="ruby-value">:relevant</span>] <span class="ruby-operator">?</span> <span class="ruby-value str">&quot;[X]&quot;</span> <span class="ruby-operator">:</span> <span class="ruby-value str">&quot;[ ]&quot;</span>
+469:         <span class="ruby-identifier">print</span> <span class="ruby-node">&quot;#{index+1}\t&quot;</span> <span class="ruby-operator">+</span> <span class="ruby-identifier">relevant</span> <span class="ruby-operator">+</span> <span class="ruby-value str">&quot;\t\t&quot;</span> <span class="ruby-operator">+</span> <span class="ruby-identifier">precision</span> <span class="ruby-operator">+</span> <span class="ruby-value str">&quot;\t\t&quot;</span> <span class="ruby-operator">+</span> <span class="ruby-identifier">recall</span> <span class="ruby-operator">+</span> <span class="ruby-value str">&quot;\t&quot;</span> <span class="ruby-operator">+</span> <span class="ruby-ivar">@documents</span>.<span class="ruby-identifier">values</span>[<span class="ruby-identifier">index</span>].<span class="ruby-identifier">score</span>.<span class="ruby-identifier">to_s</span> <span class="ruby-operator">+</span> <span class="ruby-value str">&quot;\t&quot;</span> <span class="ruby-operator">+</span> <span class="ruby-identifier">document</span> <span class="ruby-operator">+</span> <span class="ruby-value str">&quot;\n&quot;</span>
+470:       <span class="ruby-keyword kw">end</span>
+471:       <span class="ruby-identifier">print</span> <span class="ruby-value str">&quot;\n&quot;</span>
+472:       
+473:     <span class="ruby-keyword kw">end</span></pre>
+					</div>
+					
+				</div>
+
+				
+
+				
+			</div>
+
+		
+			<div id="statistics-method" class="method-detail ">
+				<a name="method-i-statistics"></a>
+
+				<div class="method-heading">
+				
+					<span class="method-name">statistics</span><span
+						class="method-args">(max = 0)</span>
+					<span class="method-click-advice">click to toggle source</span>
+				
+				</div>
+
+				<div class="method-description">
+					
+					<p>
+Calculates the precision and recall for each rank and returns it in a Hash
+of results
+</p>
+					
+
+					
+					<div class="method-source-code"
+						id="statistics-source">
+<pre>
+     <span class="ruby-comment cmt"># File lib/retreval/query_result.rb, line 379</span>
+379:     <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">statistics</span>(<span class="ruby-identifier">max</span> = <span class="ruby-value">0</span>)
+380:       
+381:       <span class="ruby-keyword kw">return</span> <span class="ruby-ivar">@results</span> <span class="ruby-keyword kw">if</span> <span class="ruby-ivar">@calculated</span>
+382:       
+383:       <span class="ruby-keyword kw">begin</span>
+384:       
+385:         <span class="ruby-comment cmt"># If no maximum parameter is given, all documents are evalutated</span>
+386:         <span class="ruby-comment cmt"># This should be the default for normal evaluations</span>
+387:         <span class="ruby-identifier">max</span> = <span class="ruby-ivar">@documents</span>.<span class="ruby-identifier">length</span> <span class="ruby-keyword kw">if</span> <span class="ruby-identifier">max</span> <span class="ruby-operator">==</span> <span class="ruby-value">0</span> <span class="ruby-keyword kw">or</span> <span class="ruby-identifier">max</span> <span class="ruby-operator">&gt;</span> <span class="ruby-ivar">@documents</span>.<span class="ruby-identifier">length</span>
+388:       
+389:         <span class="ruby-comment cmt"># Calculate precision and recall for the top i documents only</span>
+390:         <span class="ruby-ivar">@results</span> = <span class="ruby-constant">Array</span>.<span class="ruby-identifier">new</span>
+391:         <span class="ruby-keyword kw">for</span> <span class="ruby-identifier">i</span> <span class="ruby-keyword kw">in</span> (<span class="ruby-value">1</span><span class="ruby-operator">..</span><span class="ruby-identifier">max</span>)
+392:           <span class="ruby-identifier">subset</span> = <span class="ruby-constant">OpenStruct</span>.<span class="ruby-identifier">new</span>
+393:           <span class="ruby-identifier">subset</span>.<span class="ruby-identifier">documents</span> = <span class="ruby-constant">Array</span>.<span class="ruby-identifier">new</span>
+394:           <span class="ruby-identifier">subset</span>.<span class="ruby-identifier">query</span> = <span class="ruby-ivar">@query</span>
+395:           <span class="ruby-ivar">@documents</span>.<span class="ruby-identifier">values</span>.<span class="ruby-identifier">each_with_index</span> <span class="ruby-keyword kw">do</span> <span class="ruby-operator">|</span><span class="ruby-identifier">doc</span>, <span class="ruby-identifier">index</span><span class="ruby-operator">|</span>
+396:             <span class="ruby-comment cmt"># Only get the subset of documents</span>
+397:             <span class="ruby-identifier">subset</span>.<span class="ruby-identifier">documents</span> <span class="ruby-operator">&lt;&lt;</span> <span class="ruby-identifier">doc</span>
+398:             <span class="ruby-keyword kw">break</span> <span class="ruby-keyword kw">if</span> <span class="ruby-identifier">index</span> <span class="ruby-operator">==</span> <span class="ruby-identifier">i</span> <span class="ruby-operator">-</span> <span class="ruby-value">1</span>
+399:           <span class="ruby-keyword kw">end</span>
+400:           <span class="ruby-identifier">results</span> = <span class="ruby-identifier">calculate</span>(<span class="ruby-identifier">subset</span>)
+401:           <span class="ruby-ivar">@results</span> <span class="ruby-operator">&lt;&lt;</span> <span class="ruby-identifier">results</span>
+402:         <span class="ruby-keyword kw">end</span>
+403:       
+404:         <span class="ruby-comment cmt"># Now mark everything as calculated and return it</span>
+405:         <span class="ruby-ivar">@calculated</span> = <span class="ruby-keyword kw">true</span>
+406:         <span class="ruby-ivar">@results</span>
+407:       
+408:       <span class="ruby-keyword kw">rescue</span> <span class="ruby-constant">Exception</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-identifier">e</span>
+409:         <span class="ruby-identifier">raise</span> <span class="ruby-value str">&quot;Error while calculating results: &quot;</span> <span class="ruby-operator">+</span> <span class="ruby-identifier">e</span>.<span class="ruby-identifier">message</span>
+410:       <span class="ruby-keyword kw">end</span>
+411:       
+412:     <span class="ruby-keyword kw">end</span></pre>
+					</div>
+					
+				</div>
+
+				
+
+				
+			</div>
+
+		
+		</div>
+	
+
+	</div>
+
+
+	<div id="rdoc-debugging-section-dump" class="debugging-section">
+	
+		<p>Disabled; run with --debug to generate this.</p>
+	
+	</div>
+
+	<div id="validator-badges">
+		<p><small><a href="http://validator.w3.org/check/referer">[Validate]</a></small></p>
+		<p><small>Generated with the <a href="http://deveiate.org/projects/Darkfish-Rdoc/">Darkfish
+			Rdoc Generator</a> 1.1.6</small>.</p>
+	</div>
+
+</body>
+</html>
+

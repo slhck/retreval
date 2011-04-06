@@ -1,0 +1,551 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+	"http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+	<meta content="text/html; charset=utf-8" http-equiv="Content-Type" />
+
+	<title>Class: TestGoldStandard</title>
+
+	<link rel="stylesheet" href="./rdoc.css" type="text/css" media="screen" />
+
+	<script src="./js/jquery.js" type="text/javascript"
+		charset="utf-8"></script>
+	<script src="./js/thickbox-compressed.js" type="text/javascript"
+		charset="utf-8"></script>
+	<script src="./js/quicksearch.js" type="text/javascript"
+		charset="utf-8"></script>
+	<script src="./js/darkfish.js" type="text/javascript"
+		charset="utf-8"></script>
+
+</head>
+<body class="class">
+
+	<div id="metadata">
+		<div id="home-metadata">
+			<div id="home-section" class="section">
+        <h3 class="section-header">
+          <a href="./index.html">Home</a>
+          <a href="./index.html#classes">Classes</a>
+          <a href="./index.html#methods">Methods</a>
+        </h3>
+			</div>
+		</div>
+
+		<div id="file-metadata">
+			<div id="file-list-section" class="section">
+				<h3 class="section-header">In Files</h3>
+				<div class="section-body">
+					<ul>
+					
+						<li><a href="./test/test_gold_standard_rb.html?TB_iframe=true&amp;height=550&amp;width=785"
+							class="thickbox" title="test/test_gold_standard.rb">test/test_gold_standard.rb</a></li>
+					
+					</ul>
+				</div>
+			</div>
+
+			
+		</div>
+
+		<div id="class-metadata">
+
+			<!-- Parent Class -->
+			
+			<div id="parent-class-section" class="section">
+				<h3 class="section-header">Parent</h3>
+				
+				<p class="link">Test::Unit::TestCase</p>
+				
+			</div>
+			
+
+			<!-- Namespace Contents -->
+			
+
+			<!-- Method Quickref -->
+			
+			<div id="method-list-section" class="section">
+				<h3 class="section-header">Methods</h3>
+				<ul class="link-list">
+					
+					<li><a href="#method-i-add_test_judgement">#add_test_judgement</a></li>
+					
+					<li><a href="#method-i-test_document">#test_document</a></li>
+					
+					<li><a href="#method-i-test_judgement">#test_judgement</a></li>
+					
+					<li><a href="#method-i-test_kappa_ir_book">#test_kappa_ir_book</a></li>
+					
+					<li><a href="#method-i-test_kappa_wikipedia">#test_kappa_wikipedia</a></li>
+					
+					<li><a href="#method-i-test_query">#test_query</a></li>
+					
+					<li><a href="#method-i-test_relevant">#test_relevant</a></li>
+					
+					<li><a href="#method-i-test_user">#test_user</a></li>
+					
+				</ul>
+			</div>
+			
+
+			<!-- Included Modules -->
+			
+		</div>
+
+		<div id="project-metadata">
+			
+			
+			<div id="fileindex-section" class="section project-section">
+				<h3 class="section-header">Files</h3>
+				<ul>
+				
+					<li class="file"><a href="./CHANGELOG.html">CHANGELOG</a></li>
+				
+					<li class="file"><a href="./TODO.html">TODO</a></li>
+				
+				</ul>
+			</div>
+			
+
+			<div id="classindex-section" class="section project-section">
+				<h3 class="section-header">Class Index
+					<span class="search-toggle"><img src="./images/find.png"
+						height="16" width="16" alt="[+]"
+						title="show/hide quicksearch" /></span></h3>
+				<form action="#" method="get" accept-charset="utf-8" class="initially-hidden">
+				<fieldset>
+					<legend>Quicksearch</legend>
+					<input type="text" name="quicksearch" value=""
+						class="quicksearch-field" />
+				</fieldset>
+				</form>
+
+				<ul class="link-list">
+				
+					<li><a href="./Retreval.html">Retreval</a></li>
+				
+					<li><a href="./Retreval/Document.html">Retreval::Document</a></li>
+				
+					<li><a href="./Retreval/GoldStandard.html">Retreval::GoldStandard</a></li>
+				
+					<li><a href="./Retreval/Judgement.html">Retreval::Judgement</a></li>
+				
+					<li><a href="./Retreval/Options.html">Retreval::Options</a></li>
+				
+					<li><a href="./Retreval/Query.html">Retreval::Query</a></li>
+				
+					<li><a href="./Retreval/QueryResult.html">Retreval::QueryResult</a></li>
+				
+					<li><a href="./Retreval/QueryResultSet.html">Retreval::QueryResultSet</a></li>
+				
+					<li><a href="./Retreval/RankedQueryResult.html">Retreval::RankedQueryResult</a></li>
+				
+					<li><a href="./Retreval/ResultDocument.html">Retreval::ResultDocument</a></li>
+				
+					<li><a href="./Retreval/Runner.html">Retreval::Runner</a></li>
+				
+					<li><a href="./Retreval/UnrankedQueryResult.html">Retreval::UnrankedQueryResult</a></li>
+				
+					<li><a href="./Retreval/User.html">Retreval::User</a></li>
+				
+					<li><a href="./TestGoldStandard.html">TestGoldStandard</a></li>
+				
+					<li><a href="./TestQueryResult.html">TestQueryResult</a></li>
+				
+				</ul>
+				<div id="no-class-search-results" style="display: none;">No matching classes.</div>
+			</div>
+
+			
+		</div>
+	</div>
+
+	<div id="documentation">
+		<h1 class="class">TestGoldStandard</h1>
+
+		<div id="description">
+			<p>
+Some basic unit tests for the GoldStandard
+</p>
+
+		</div>
+
+		<!-- Constants -->
+		
+
+		<!-- Attributes -->
+		
+
+		<!-- Methods -->
+		
+		<div id="public-instance-method-details" class="method-section section">
+			<h3 class="section-header">Public Instance Methods</h3>
+
+		
+			<div id="add-test-judgement-method" class="method-detail ">
+				<a name="method-i-add_test_judgement"></a>
+
+				<div class="method-heading">
+				
+					<span class="method-name">add_test_judgement</span><span
+						class="method-args">()</span>
+					<span class="method-click-advice">click to toggle source</span>
+				
+				</div>
+
+				<div class="method-description">
+					
+					<p>
+Adds one test judgement to this test case
+</p>
+					
+
+					
+					<div class="method-source-code"
+						id="add-test-judgement-source">
+<pre>
+    <span class="ruby-comment cmt"># File test/test_gold_standard.rb, line 9</span>
+ 9:   <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">add_test_judgement</span>
+10:     <span class="ruby-ivar">@gold_standard</span> = <span class="ruby-constant">Retreval</span><span class="ruby-operator">::</span><span class="ruby-constant">GoldStandard</span>.<span class="ruby-identifier">new</span>
+11:     <span class="ruby-ivar">@gold_standard</span>.<span class="ruby-identifier">add_judgement</span> <span class="ruby-value">:document</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-value str">&quot;doc1&quot;</span>, <span class="ruby-value">:query</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-value str">&quot;query1&quot;</span>, <span class="ruby-value">:relevant</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-keyword kw">true</span>, <span class="ruby-value">:user</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-value str">&quot;John Doe&quot;</span>
+12:   <span class="ruby-keyword kw">end</span></pre>
+					</div>
+					
+				</div>
+
+				
+
+				
+			</div>
+
+		
+			<div id="test-document-method" class="method-detail ">
+				<a name="method-i-test_document"></a>
+
+				<div class="method-heading">
+				
+					<span class="method-name">test_document</span><span
+						class="method-args">()</span>
+					<span class="method-click-advice">click to toggle source</span>
+				
+				</div>
+
+				<div class="method-description">
+					
+					<p>
+Tests whether the Document is correctly included
+</p>
+					
+
+					
+					<div class="method-source-code"
+						id="test-document-source">
+<pre>
+    <span class="ruby-comment cmt"># File test/test_gold_standard.rb, line 16</span>
+16:   <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">test_document</span>
+17:     <span class="ruby-identifier">add_test_judgement</span>
+18:     <span class="ruby-identifier">assert</span>(<span class="ruby-ivar">@gold_standard</span>.<span class="ruby-identifier">contains_document?</span> <span class="ruby-value">:id</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-value str">&quot;doc1&quot;</span>)
+19:   <span class="ruby-keyword kw">end</span></pre>
+					</div>
+					
+				</div>
+
+				
+
+				
+			</div>
+
+		
+			<div id="test-judgement-method" class="method-detail ">
+				<a name="method-i-test_judgement"></a>
+
+				<div class="method-heading">
+				
+					<span class="method-name">test_judgement</span><span
+						class="method-args">()</span>
+					<span class="method-click-advice">click to toggle source</span>
+				
+				</div>
+
+				<div class="method-description">
+					
+					<p>
+Tests whether the Judgement is correctly included
+</p>
+					
+
+					
+					<div class="method-source-code"
+						id="test-judgement-source">
+<pre>
+    <span class="ruby-comment cmt"># File test/test_gold_standard.rb, line 37</span>
+37:   <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">test_judgement</span>
+38:     <span class="ruby-identifier">add_test_judgement</span>
+39:     <span class="ruby-identifier">assert</span>(<span class="ruby-ivar">@gold_standard</span>.<span class="ruby-identifier">contains_judgement?</span> <span class="ruby-value">:document</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-value str">&quot;doc1&quot;</span>, <span class="ruby-value">:query</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-value str">&quot;query1&quot;</span>)
+40:   <span class="ruby-keyword kw">end</span></pre>
+					</div>
+					
+				</div>
+
+				
+
+				
+			</div>
+
+		
+			<div id="test-kappa-ir-book-method" class="method-detail ">
+				<a name="method-i-test_kappa_ir_book"></a>
+
+				<div class="method-heading">
+				
+					<span class="method-name">test_kappa_ir_book</span><span
+						class="method-args">()</span>
+					<span class="method-click-advice">click to toggle source</span>
+				
+				</div>
+
+				<div class="method-description">
+					
+					<p>
+Tests if the kappa measure is calculated correctly. See <a
+href="http://nlp.stanford.edu/IR-book/html/htmledition/assessing-relevance-1.html">nlp.stanford.edu/IR-book/html/htmledition/assessing-relevance-1.html</a>
+for the examples in this test
+</p>
+					
+
+					
+					<div class="method-source-code"
+						id="test-kappa-ir-book-source">
+<pre>
+    <span class="ruby-comment cmt"># File test/test_gold_standard.rb, line 52</span>
+52:   <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">test_kappa_ir_book</span>
+53:     
+54:     <span class="ruby-ivar">@gold_standard</span> = <span class="ruby-constant">Retreval</span><span class="ruby-operator">::</span><span class="ruby-constant">GoldStandard</span>.<span class="ruby-identifier">new</span>
+55:     
+56:     <span class="ruby-keyword kw">for</span> <span class="ruby-identifier">i</span> <span class="ruby-keyword kw">in</span> (<span class="ruby-value">1</span><span class="ruby-operator">..</span><span class="ruby-value">300</span>) <span class="ruby-keyword kw">do</span> 
+57:       <span class="ruby-ivar">@gold_standard</span>.<span class="ruby-identifier">add_judgement</span> <span class="ruby-value">:document</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-node">&quot;doc#{i}&quot;</span>, <span class="ruby-value">:query</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-node">&quot;query#{i}&quot;</span>, <span class="ruby-value">:user</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-value str">&quot;Alice&quot;</span>, <span class="ruby-value">:relevant</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-keyword kw">true</span>
+58:       <span class="ruby-ivar">@gold_standard</span>.<span class="ruby-identifier">add_judgement</span> <span class="ruby-value">:document</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-node">&quot;doc#{i}&quot;</span>, <span class="ruby-value">:query</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-node">&quot;query#{i}&quot;</span>, <span class="ruby-value">:user</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-value str">&quot;Bob&quot;</span>, <span class="ruby-value">:relevant</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-keyword kw">true</span>
+59:     <span class="ruby-keyword kw">end</span>
+60:     
+61:     <span class="ruby-keyword kw">for</span> <span class="ruby-identifier">i</span> <span class="ruby-keyword kw">in</span> (<span class="ruby-value">301</span><span class="ruby-operator">..</span><span class="ruby-value">320</span>) <span class="ruby-keyword kw">do</span>
+62:       <span class="ruby-ivar">@gold_standard</span>.<span class="ruby-identifier">add_judgement</span> <span class="ruby-value">:document</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-node">&quot;doc#{i}&quot;</span>, <span class="ruby-value">:query</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-node">&quot;query#{i}&quot;</span>, <span class="ruby-value">:user</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-value str">&quot;Alice&quot;</span>, <span class="ruby-value">:relevant</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-keyword kw">true</span>
+63:       <span class="ruby-ivar">@gold_standard</span>.<span class="ruby-identifier">add_judgement</span> <span class="ruby-value">:document</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-node">&quot;doc#{i}&quot;</span>, <span class="ruby-value">:query</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-node">&quot;query#{i}&quot;</span>, <span class="ruby-value">:user</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-value str">&quot;Bob&quot;</span>, <span class="ruby-value">:relevant</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-keyword kw">false</span>
+64:     <span class="ruby-keyword kw">end</span>
+65:     
+66:     <span class="ruby-keyword kw">for</span> <span class="ruby-identifier">i</span> <span class="ruby-keyword kw">in</span> (<span class="ruby-value">321</span><span class="ruby-operator">..</span><span class="ruby-value">330</span>) <span class="ruby-keyword kw">do</span>
+67:       <span class="ruby-ivar">@gold_standard</span>.<span class="ruby-identifier">add_judgement</span> <span class="ruby-value">:document</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-node">&quot;doc#{i}&quot;</span>, <span class="ruby-value">:query</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-node">&quot;query#{i}&quot;</span>, <span class="ruby-value">:user</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-value str">&quot;Alice&quot;</span>, <span class="ruby-value">:relevant</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-keyword kw">false</span>
+68:       <span class="ruby-ivar">@gold_standard</span>.<span class="ruby-identifier">add_judgement</span> <span class="ruby-value">:document</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-node">&quot;doc#{i}&quot;</span>, <span class="ruby-value">:query</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-node">&quot;query#{i}&quot;</span>, <span class="ruby-value">:user</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-value str">&quot;Bob&quot;</span>, <span class="ruby-value">:relevant</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-keyword kw">true</span>
+69:     <span class="ruby-keyword kw">end</span>
+70:     
+71:     <span class="ruby-keyword kw">for</span> <span class="ruby-identifier">i</span> <span class="ruby-keyword kw">in</span> (<span class="ruby-value">331</span><span class="ruby-operator">..</span><span class="ruby-value">400</span>) <span class="ruby-keyword kw">do</span>
+72:       <span class="ruby-ivar">@gold_standard</span>.<span class="ruby-identifier">add_judgement</span> <span class="ruby-value">:document</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-node">&quot;doc#{i}&quot;</span>, <span class="ruby-value">:query</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-node">&quot;query#{i}&quot;</span>, <span class="ruby-value">:user</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-value str">&quot;Alice&quot;</span>, <span class="ruby-value">:relevant</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-keyword kw">false</span>
+73:       <span class="ruby-ivar">@gold_standard</span>.<span class="ruby-identifier">add_judgement</span> <span class="ruby-value">:document</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-node">&quot;doc#{i}&quot;</span>, <span class="ruby-value">:query</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-node">&quot;query#{i}&quot;</span>, <span class="ruby-value">:user</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-value str">&quot;Bob&quot;</span>, <span class="ruby-value">:relevant</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-keyword kw">false</span>
+74:     <span class="ruby-keyword kw">end</span>
+75:     
+76:     <span class="ruby-identifier">assert_equal</span>(<span class="ruby-value">0.7759103641456584</span>, <span class="ruby-ivar">@gold_standard</span>.<span class="ruby-identifier">kappa</span>, <span class="ruby-value str">&quot;IR Book kappa test failed!&quot;</span>)
+77:   <span class="ruby-keyword kw">end</span></pre>
+					</div>
+					
+				</div>
+
+				
+
+				
+			</div>
+
+		
+			<div id="test-kappa-wikipedia-method" class="method-detail ">
+				<a name="method-i-test_kappa_wikipedia"></a>
+
+				<div class="method-heading">
+				
+					<span class="method-name">test_kappa_wikipedia</span><span
+						class="method-args">()</span>
+					<span class="method-click-advice">click to toggle source</span>
+				
+				</div>
+
+				<div class="method-description">
+					
+					<p>
+Tests if the kappa measure is calculated correctly. See <a
+href="http://nlp.stanford.edu/IR-book/html/htmledition/assessing-relevance-1.html">nlp.stanford.edu/IR-book/html/htmledition/assessing-relevance-1.html</a>
+for the examples in this test
+</p>
+					
+
+					
+					<div class="method-source-code"
+						id="test-kappa-wikipedia-source">
+<pre>
+     <span class="ruby-comment cmt"># File test/test_gold_standard.rb, line 83</span>
+ 83:   <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">test_kappa_wikipedia</span>
+ 84:     
+ 85:     <span class="ruby-ivar">@gold_standard</span> = <span class="ruby-constant">Retreval</span><span class="ruby-operator">::</span><span class="ruby-constant">GoldStandard</span>.<span class="ruby-identifier">new</span>
+ 86:     
+ 87:     <span class="ruby-keyword kw">for</span> <span class="ruby-identifier">i</span> <span class="ruby-keyword kw">in</span> (<span class="ruby-value">1</span><span class="ruby-operator">..</span><span class="ruby-value">20</span>) <span class="ruby-keyword kw">do</span> 
+ 88:       <span class="ruby-ivar">@gold_standard</span>.<span class="ruby-identifier">add_judgement</span> <span class="ruby-value">:document</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-node">&quot;doc#{i}&quot;</span>, <span class="ruby-value">:query</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-node">&quot;query#{i}&quot;</span>, <span class="ruby-value">:user</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-value str">&quot;Alice&quot;</span>, <span class="ruby-value">:relevant</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-keyword kw">true</span>
+ 89:       <span class="ruby-ivar">@gold_standard</span>.<span class="ruby-identifier">add_judgement</span> <span class="ruby-value">:document</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-node">&quot;doc#{i}&quot;</span>, <span class="ruby-value">:query</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-node">&quot;query#{i}&quot;</span>, <span class="ruby-value">:user</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-value str">&quot;Bob&quot;</span>, <span class="ruby-value">:relevant</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-keyword kw">true</span>
+ 90:     <span class="ruby-keyword kw">end</span>
+ 91:     
+ 92:     <span class="ruby-keyword kw">for</span> <span class="ruby-identifier">i</span> <span class="ruby-keyword kw">in</span> (<span class="ruby-value">21</span><span class="ruby-operator">..</span><span class="ruby-value">25</span>) <span class="ruby-keyword kw">do</span>
+ 93:       <span class="ruby-ivar">@gold_standard</span>.<span class="ruby-identifier">add_judgement</span> <span class="ruby-value">:document</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-node">&quot;doc#{i}&quot;</span>, <span class="ruby-value">:query</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-node">&quot;query#{i}&quot;</span>, <span class="ruby-value">:user</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-value str">&quot;Alice&quot;</span>, <span class="ruby-value">:relevant</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-keyword kw">true</span>
+ 94:       <span class="ruby-ivar">@gold_standard</span>.<span class="ruby-identifier">add_judgement</span> <span class="ruby-value">:document</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-node">&quot;doc#{i}&quot;</span>, <span class="ruby-value">:query</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-node">&quot;query#{i}&quot;</span>, <span class="ruby-value">:user</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-value str">&quot;Bob&quot;</span>, <span class="ruby-value">:relevant</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-keyword kw">false</span>
+ 95:     <span class="ruby-keyword kw">end</span>
+ 96:     
+ 97:     <span class="ruby-keyword kw">for</span> <span class="ruby-identifier">i</span> <span class="ruby-keyword kw">in</span> (<span class="ruby-value">26</span><span class="ruby-operator">..</span><span class="ruby-value">35</span>) <span class="ruby-keyword kw">do</span>
+ 98:       <span class="ruby-ivar">@gold_standard</span>.<span class="ruby-identifier">add_judgement</span> <span class="ruby-value">:document</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-node">&quot;doc#{i}&quot;</span>, <span class="ruby-value">:query</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-node">&quot;query#{i}&quot;</span>, <span class="ruby-value">:user</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-value str">&quot;Alice&quot;</span>, <span class="ruby-value">:relevant</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-keyword kw">false</span>
+ 99:       <span class="ruby-ivar">@gold_standard</span>.<span class="ruby-identifier">add_judgement</span> <span class="ruby-value">:document</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-node">&quot;doc#{i}&quot;</span>, <span class="ruby-value">:query</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-node">&quot;query#{i}&quot;</span>, <span class="ruby-value">:user</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-value str">&quot;Bob&quot;</span>, <span class="ruby-value">:relevant</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-keyword kw">true</span>
+100:     <span class="ruby-keyword kw">end</span>
+101:     
+102:     <span class="ruby-keyword kw">for</span> <span class="ruby-identifier">i</span> <span class="ruby-keyword kw">in</span> (<span class="ruby-value">36</span><span class="ruby-operator">..</span><span class="ruby-value">50</span>) <span class="ruby-keyword kw">do</span>
+103:       <span class="ruby-ivar">@gold_standard</span>.<span class="ruby-identifier">add_judgement</span> <span class="ruby-value">:document</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-node">&quot;doc#{i}&quot;</span>, <span class="ruby-value">:query</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-node">&quot;query#{i}&quot;</span>, <span class="ruby-value">:user</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-value str">&quot;Alice&quot;</span>, <span class="ruby-value">:relevant</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-keyword kw">false</span>
+104:       <span class="ruby-ivar">@gold_standard</span>.<span class="ruby-identifier">add_judgement</span> <span class="ruby-value">:document</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-node">&quot;doc#{i}&quot;</span>, <span class="ruby-value">:query</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-node">&quot;query#{i}&quot;</span>, <span class="ruby-value">:user</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-value str">&quot;Bob&quot;</span>, <span class="ruby-value">:relevant</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-keyword kw">false</span>
+105:     <span class="ruby-keyword kw">end</span>
+106:     <span class="ruby-identifier">puts</span> <span class="ruby-node">&quot;#{@gold_standard.kappa}&quot;</span>
+107:     <span class="ruby-identifier">assert_equal</span>(<span class="ruby-value">0.3939393939393937</span>, <span class="ruby-ivar">@gold_standard</span>.<span class="ruby-identifier">kappa</span>, <span class="ruby-value str">&quot;Wikipedia kappa test failed!&quot;</span>)
+108:     
+109:   <span class="ruby-keyword kw">end</span></pre>
+					</div>
+					
+				</div>
+
+				
+
+				
+			</div>
+
+		
+			<div id="test-query-method" class="method-detail ">
+				<a name="method-i-test_query"></a>
+
+				<div class="method-heading">
+				
+					<span class="method-name">test_query</span><span
+						class="method-args">()</span>
+					<span class="method-click-advice">click to toggle source</span>
+				
+				</div>
+
+				<div class="method-description">
+					
+					<p>
+Tests whether the Query is correctly included
+</p>
+					
+
+					
+					<div class="method-source-code"
+						id="test-query-source">
+<pre>
+    <span class="ruby-comment cmt"># File test/test_gold_standard.rb, line 23</span>
+23:   <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">test_query</span>
+24:     <span class="ruby-identifier">add_test_judgement</span>
+25:     <span class="ruby-identifier">assert</span>(<span class="ruby-ivar">@gold_standard</span>.<span class="ruby-identifier">contains_query?</span> <span class="ruby-value">:querystring</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-value str">&quot;query1&quot;</span>)
+26:   <span class="ruby-keyword kw">end</span></pre>
+					</div>
+					
+				</div>
+
+				
+
+				
+			</div>
+
+		
+			<div id="test-relevant-method" class="method-detail ">
+				<a name="method-i-test_relevant"></a>
+
+				<div class="method-heading">
+				
+					<span class="method-name">test_relevant</span><span
+						class="method-args">()</span>
+					<span class="method-click-advice">click to toggle source</span>
+				
+				</div>
+
+				<div class="method-description">
+					
+					<p>
+Tests whether the Judgement (i.e. the relevancy) is correctly added
+</p>
+					
+
+					
+					<div class="method-source-code"
+						id="test-relevant-source">
+<pre>
+    <span class="ruby-comment cmt"># File test/test_gold_standard.rb, line 44</span>
+44:   <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">test_relevant</span>
+45:     <span class="ruby-identifier">add_test_judgement</span>
+46:     <span class="ruby-identifier">assert</span>(<span class="ruby-ivar">@gold_standard</span>.<span class="ruby-identifier">relevant?</span> <span class="ruby-value">:document</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-value str">&quot;doc1&quot;</span>, <span class="ruby-value">:query</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-value str">&quot;query1&quot;</span>)
+47:   <span class="ruby-keyword kw">end</span></pre>
+					</div>
+					
+				</div>
+
+				
+
+				
+			</div>
+
+		
+			<div id="test-user-method" class="method-detail ">
+				<a name="method-i-test_user"></a>
+
+				<div class="method-heading">
+				
+					<span class="method-name">test_user</span><span
+						class="method-args">()</span>
+					<span class="method-click-advice">click to toggle source</span>
+				
+				</div>
+
+				<div class="method-description">
+					
+					<p>
+Tests whether the User is correctly included
+</p>
+					
+
+					
+					<div class="method-source-code"
+						id="test-user-source">
+<pre>
+    <span class="ruby-comment cmt"># File test/test_gold_standard.rb, line 30</span>
+30:   <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">test_user</span>
+31:     <span class="ruby-identifier">add_test_judgement</span>
+32:     <span class="ruby-identifier">assert</span>(<span class="ruby-ivar">@gold_standard</span>.<span class="ruby-identifier">contains_user?</span> <span class="ruby-value">:id</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-value str">&quot;John Doe&quot;</span>)
+33:   <span class="ruby-keyword kw">end</span></pre>
+					</div>
+					
+				</div>
+
+				
+
+				
+			</div>
+
+		
+		</div>
+	
+
+	</div>
+
+
+	<div id="rdoc-debugging-section-dump" class="debugging-section">
+	
+		<p>Disabled; run with --debug to generate this.</p>
+	
+	</div>
+
+	<div id="validator-badges">
+		<p><small><a href="http://validator.w3.org/check/referer">[Validate]</a></small></p>
+		<p><small>Generated with the <a href="http://deveiate.org/projects/Darkfish-Rdoc/">Darkfish
+			Rdoc Generator</a> 1.1.6</small>.</p>
+	</div>
+
+</body>
+</html>
+

@@ -1,0 +1,10 @@
+Wed, 06 Apr 2011 10:35:35 +0200
+./bin/retreval	Sun, 13 Mar 2011 00:09:50 +0100
+./CHANGELOG	Sun, 13 Mar 2011 11:19:06 +0100
+./lib/retreval/gold_standard.rb	Wed, 06 Apr 2011 10:29:49 +0200
+./lib/retreval/options.rb	Sun, 13 Mar 2011 00:12:22 +0100
+./lib/retreval/query_result.rb	Wed, 06 Apr 2011 10:34:20 +0200
+./lib/retreval/runner.rb	Tue, 05 Apr 2011 15:22:49 +0200
+./test/test_gold_standard.rb	Tue, 05 Apr 2011 15:32:54 +0200
+./test/test_query_result.rb	Tue, 05 Apr 2011 15:32:58 +0200
+./TODO	Wed, 06 Apr 2011 10:35:25 +0200

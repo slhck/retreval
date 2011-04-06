@@ -1,0 +1,606 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+	"http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+	<meta content="text/html; charset=utf-8" http-equiv="Content-Type" />
+
+	<title>Class: TestQueryResult</title>
+
+	<link rel="stylesheet" href="./rdoc.css" type="text/css" media="screen" />
+
+	<script src="./js/jquery.js" type="text/javascript"
+		charset="utf-8"></script>
+	<script src="./js/thickbox-compressed.js" type="text/javascript"
+		charset="utf-8"></script>
+	<script src="./js/quicksearch.js" type="text/javascript"
+		charset="utf-8"></script>
+	<script src="./js/darkfish.js" type="text/javascript"
+		charset="utf-8"></script>
+
+</head>
+<body class="class">
+
+	<div id="metadata">
+		<div id="home-metadata">
+			<div id="home-section" class="section">
+        <h3 class="section-header">
+          <a href="./index.html">Home</a>
+          <a href="./index.html#classes">Classes</a>
+          <a href="./index.html#methods">Methods</a>
+        </h3>
+			</div>
+		</div>
+
+		<div id="file-metadata">
+			<div id="file-list-section" class="section">
+				<h3 class="section-header">In Files</h3>
+				<div class="section-body">
+					<ul>
+					
+						<li><a href="./test/test_query_result_rb.html?TB_iframe=true&amp;height=550&amp;width=785"
+							class="thickbox" title="test/test_query_result.rb">test/test_query_result.rb</a></li>
+					
+					</ul>
+				</div>
+			</div>
+
+			
+		</div>
+
+		<div id="class-metadata">
+
+			<!-- Parent Class -->
+			
+			<div id="parent-class-section" class="section">
+				<h3 class="section-header">Parent</h3>
+				
+				<p class="link">Test::Unit::TestCase</p>
+				
+			</div>
+			
+
+			<!-- Namespace Contents -->
+			
+
+			<!-- Method Quickref -->
+			
+			<div id="method-list-section" class="section">
+				<h3 class="section-header">Methods</h3>
+				<ul class="link-list">
+					
+					<li><a href="#method-i-add_ranked_query_result">#add_ranked_query_result</a></li>
+					
+					<li><a href="#method-i-add_test_judgements">#add_test_judgements</a></li>
+					
+					<li><a href="#method-i-add_unranked_query_result">#add_unranked_query_result</a></li>
+					
+					<li><a href="#method-i-test_eleven_point_precision">#test_eleven_point_precision</a></li>
+					
+					<li><a href="#method-i-test_ranked_precision">#test_ranked_precision</a></li>
+					
+					<li><a href="#method-i-test_ranked_recall">#test_ranked_recall</a></li>
+					
+					<li><a href="#method-i-test_unranked_precision">#test_unranked_precision</a></li>
+					
+					<li><a href="#method-i-test_unranked_recall">#test_unranked_recall</a></li>
+					
+				</ul>
+			</div>
+			
+
+			<!-- Included Modules -->
+			
+		</div>
+
+		<div id="project-metadata">
+			
+			
+			<div id="fileindex-section" class="section project-section">
+				<h3 class="section-header">Files</h3>
+				<ul>
+				
+					<li class="file"><a href="./CHANGELOG.html">CHANGELOG</a></li>
+				
+					<li class="file"><a href="./TODO.html">TODO</a></li>
+				
+				</ul>
+			</div>
+			
+
+			<div id="classindex-section" class="section project-section">
+				<h3 class="section-header">Class Index
+					<span class="search-toggle"><img src="./images/find.png"
+						height="16" width="16" alt="[+]"
+						title="show/hide quicksearch" /></span></h3>
+				<form action="#" method="get" accept-charset="utf-8" class="initially-hidden">
+				<fieldset>
+					<legend>Quicksearch</legend>
+					<input type="text" name="quicksearch" value=""
+						class="quicksearch-field" />
+				</fieldset>
+				</form>
+
+				<ul class="link-list">
+				
+					<li><a href="./Retreval.html">Retreval</a></li>
+				
+					<li><a href="./Retreval/Document.html">Retreval::Document</a></li>
+				
+					<li><a href="./Retreval/GoldStandard.html">Retreval::GoldStandard</a></li>
+				
+					<li><a href="./Retreval/Judgement.html">Retreval::Judgement</a></li>
+				
+					<li><a href="./Retreval/Options.html">Retreval::Options</a></li>
+				
+					<li><a href="./Retreval/Query.html">Retreval::Query</a></li>
+				
+					<li><a href="./Retreval/QueryResult.html">Retreval::QueryResult</a></li>
+				
+					<li><a href="./Retreval/QueryResultSet.html">Retreval::QueryResultSet</a></li>
+				
+					<li><a href="./Retreval/RankedQueryResult.html">Retreval::RankedQueryResult</a></li>
+				
+					<li><a href="./Retreval/ResultDocument.html">Retreval::ResultDocument</a></li>
+				
+					<li><a href="./Retreval/Runner.html">Retreval::Runner</a></li>
+				
+					<li><a href="./Retreval/UnrankedQueryResult.html">Retreval::UnrankedQueryResult</a></li>
+				
+					<li><a href="./Retreval/User.html">Retreval::User</a></li>
+				
+					<li><a href="./TestGoldStandard.html">TestGoldStandard</a></li>
+				
+					<li><a href="./TestQueryResult.html">TestQueryResult</a></li>
+				
+				</ul>
+				<div id="no-class-search-results" style="display: none;">No matching classes.</div>
+			</div>
+
+			
+		</div>
+	</div>
+
+	<div id="documentation">
+		<h1 class="class">TestQueryResult</h1>
+
+		<div id="description">
+			<p>
+Some basic unit tests for QueryResult Unranked results include 4 documents
+of 10, which are all retrieved. The ranked results are evaluated from this
+table:
+</p>
+<pre>
+     Index Relevant  Precision   Recall        Document ID
+     1     [X]       1.000        0.250        doc1
+     2     [X]       1.000        0.500        doc2
+     3     [ ]       0.667        0.500        doc5
+     4     [X]       0.750        0.750        doc3
+     5     [ ]       0.600        0.750        doc6
+     6     [X]       0.667        1.000        doc4
+     7     [ ]       0.571        1.000        doc7
+     8     [ ]       0.500        1.000        doc8
+     9     [ ]       0.444        1.000        doc9
+     10    [ ]       0.400        1.000        doc10</pre>
+
+		</div>
+
+		<!-- Constants -->
+		
+
+		<!-- Attributes -->
+		
+
+		<!-- Methods -->
+		
+		<div id="public-instance-method-details" class="method-section section">
+			<h3 class="section-header">Public Instance Methods</h3>
+
+		
+			<div id="add-ranked-query-result-method" class="method-detail ">
+				<a name="method-i-add_ranked_query_result"></a>
+
+				<div class="method-heading">
+				
+					<span class="method-name">add_ranked_query_result</span><span
+						class="method-args">()</span>
+					<span class="method-click-advice">click to toggle source</span>
+				
+				</div>
+
+				<div class="method-description">
+					
+					<p>
+Adds the ranked query results to be tested against to this test case
+</p>
+					
+
+					
+					<div class="method-source-code"
+						id="add-ranked-query-result-source">
+<pre>
+    <span class="ruby-comment cmt"># File test/test_query_result.rb, line 55</span>
+55:   <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">add_ranked_query_result</span>
+56:     
+57:     <span class="ruby-ivar">@query_result</span> = <span class="ruby-constant">Retreval</span><span class="ruby-operator">::</span><span class="ruby-constant">RankedQueryResult</span>.<span class="ruby-identifier">new</span> <span class="ruby-value">:query</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-value str">&quot;query1&quot;</span>, <span class="ruby-value">:gold_standard</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-ivar">@gold_standard</span>
+58:     
+59:     <span class="ruby-ivar">@query_result</span>.<span class="ruby-identifier">add_document</span> <span class="ruby-value">:id</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-value str">&quot;doc1&quot;</span>
+60:     <span class="ruby-ivar">@query_result</span>.<span class="ruby-identifier">add_document</span> <span class="ruby-value">:id</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-value str">&quot;doc2&quot;</span>
+61:     <span class="ruby-ivar">@query_result</span>.<span class="ruby-identifier">add_document</span> <span class="ruby-value">:id</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-value str">&quot;doc5&quot;</span>
+62:     <span class="ruby-ivar">@query_result</span>.<span class="ruby-identifier">add_document</span> <span class="ruby-value">:id</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-value str">&quot;doc3&quot;</span>
+63:     <span class="ruby-ivar">@query_result</span>.<span class="ruby-identifier">add_document</span> <span class="ruby-value">:id</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-value str">&quot;doc6&quot;</span>
+64:     <span class="ruby-ivar">@query_result</span>.<span class="ruby-identifier">add_document</span> <span class="ruby-value">:id</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-value str">&quot;doc4&quot;</span>
+65:     <span class="ruby-ivar">@query_result</span>.<span class="ruby-identifier">add_document</span> <span class="ruby-value">:id</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-value str">&quot;doc7&quot;</span>
+66:     <span class="ruby-ivar">@query_result</span>.<span class="ruby-identifier">add_document</span> <span class="ruby-value">:id</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-value str">&quot;doc8&quot;</span>
+67:     <span class="ruby-ivar">@query_result</span>.<span class="ruby-identifier">add_document</span> <span class="ruby-value">:id</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-value str">&quot;doc9&quot;</span>
+68:     <span class="ruby-ivar">@query_result</span>.<span class="ruby-identifier">add_document</span> <span class="ruby-value">:id</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-value str">&quot;doc10&quot;</span>
+69:     
+70:   <span class="ruby-keyword kw">end</span></pre>
+					</div>
+					
+				</div>
+
+				
+
+				
+			</div>
+
+		
+			<div id="add-test-judgements-method" class="method-detail ">
+				<a name="method-i-add_test_judgements"></a>
+
+				<div class="method-heading">
+				
+					<span class="method-name">add_test_judgements</span><span
+						class="method-args">()</span>
+					<span class="method-click-advice">click to toggle source</span>
+				
+				</div>
+
+				<div class="method-description">
+					
+					<p>
+Adds 10 test judgements to this test case
+</p>
+					
+
+					
+					<div class="method-source-code"
+						id="add-test-judgements-source">
+<pre>
+    <span class="ruby-comment cmt"># File test/test_query_result.rb, line 23</span>
+23:   <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">add_test_judgements</span>
+24:     
+25:     <span class="ruby-ivar">@gold_standard</span> = <span class="ruby-constant">Retreval</span><span class="ruby-operator">::</span><span class="ruby-constant">GoldStandard</span>.<span class="ruby-identifier">new</span>
+26:     
+27:     <span class="ruby-keyword kw">for</span> <span class="ruby-identifier">i</span> <span class="ruby-keyword kw">in</span> (<span class="ruby-value">1</span><span class="ruby-operator">..</span><span class="ruby-value">4</span>) <span class="ruby-keyword kw">do</span>
+28:       <span class="ruby-ivar">@gold_standard</span>.<span class="ruby-identifier">add_judgement</span> <span class="ruby-value">:document</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-node">&quot;doc#{i}&quot;</span>, <span class="ruby-value">:query</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-value str">&quot;query1&quot;</span>, <span class="ruby-value">:relevant</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-keyword kw">true</span>
+29:     <span class="ruby-keyword kw">end</span>
+30:     
+31:     <span class="ruby-keyword kw">for</span> <span class="ruby-identifier">i</span> <span class="ruby-keyword kw">in</span> (<span class="ruby-value">5</span><span class="ruby-operator">..</span><span class="ruby-value">10</span>) <span class="ruby-keyword kw">do</span>
+32:       <span class="ruby-ivar">@gold_standard</span>.<span class="ruby-identifier">add_judgement</span> <span class="ruby-value">:document</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-node">&quot;doc#{i}&quot;</span>, <span class="ruby-value">:query</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-value str">&quot;query1&quot;</span>, <span class="ruby-value">:relevant</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-keyword kw">false</span>
+33:     <span class="ruby-keyword kw">end</span>
+34:     
+35:   <span class="ruby-keyword kw">end</span></pre>
+					</div>
+					
+				</div>
+
+				
+
+				
+			</div>
+
+		
+			<div id="add-unranked-query-result-method" class="method-detail ">
+				<a name="method-i-add_unranked_query_result"></a>
+
+				<div class="method-heading">
+				
+					<span class="method-name">add_unranked_query_result</span><span
+						class="method-args">()</span>
+					<span class="method-click-advice">click to toggle source</span>
+				
+				</div>
+
+				<div class="method-description">
+					
+					<p>
+Adds the unranked query results to be tested against to this test case
+</p>
+					
+
+					
+					<div class="method-source-code"
+						id="add-unranked-query-result-source">
+<pre>
+    <span class="ruby-comment cmt"># File test/test_query_result.rb, line 39</span>
+39:   <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">add_unranked_query_result</span>
+40:     
+41:     <span class="ruby-ivar">@query_result</span> = <span class="ruby-constant">Retreval</span><span class="ruby-operator">::</span><span class="ruby-constant">UnrankedQueryResult</span>.<span class="ruby-identifier">new</span> <span class="ruby-value">:query</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-value str">&quot;query1&quot;</span>, <span class="ruby-value">:gold_standard</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-ivar">@gold_standard</span>
+42:     
+43:     <span class="ruby-keyword kw">for</span> <span class="ruby-identifier">i</span> <span class="ruby-keyword kw">in</span> (<span class="ruby-value">1</span><span class="ruby-operator">..</span><span class="ruby-value">4</span>) <span class="ruby-keyword kw">do</span>
+44:       <span class="ruby-ivar">@query_result</span>.<span class="ruby-identifier">add_document</span> <span class="ruby-value">:id</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-node">&quot;doc#{i}&quot;</span>
+45:     <span class="ruby-keyword kw">end</span>
+46:     
+47:     <span class="ruby-keyword kw">for</span> <span class="ruby-identifier">i</span> <span class="ruby-keyword kw">in</span> (<span class="ruby-value">5</span><span class="ruby-operator">..</span><span class="ruby-value">10</span>) <span class="ruby-keyword kw">do</span>
+48:       <span class="ruby-ivar">@query_result</span>.<span class="ruby-identifier">add_document</span> <span class="ruby-value">:id</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-node">&quot;doc#{i}&quot;</span>
+49:     <span class="ruby-keyword kw">end</span>
+50:     
+51:   <span class="ruby-keyword kw">end</span></pre>
+					</div>
+					
+				</div>
+
+				
+
+				
+			</div>
+
+		
+			<div id="test-eleven-point-precision-method" class="method-detail ">
+				<a name="method-i-test_eleven_point_precision"></a>
+
+				<div class="method-heading">
+				
+					<span class="method-name">test_eleven_point_precision</span><span
+						class="method-args">()</span>
+					<span class="method-click-advice">click to toggle source</span>
+				
+				</div>
+
+				<div class="method-description">
+					
+					<p>
+Tests the correct calculation of the eleven point precision as outlined
+here: <a
+href="http://nlp.stanford.edu/IR-book/html/htmledition/evaluation-of-ranked-retrieval-results-1.html">nlp.stanford.edu/IR-book/html/htmledition/evaluation-of-ranked-retrieval-results-1.html</a>
+</p>
+					
+
+					
+					<div class="method-source-code"
+						id="test-eleven-point-precision-source">
+<pre>
+     <span class="ruby-comment cmt"># File test/test_query_result.rb, line 142</span>
+142:   <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">test_eleven_point_precision</span>
+143:     
+144:     <span class="ruby-identifier">add_test_judgements</span>
+145:     <span class="ruby-identifier">add_ranked_query_result</span>
+146:     <span class="ruby-identifier">expected_results</span> = [
+147:         <span class="ruby-value">1.0</span>,
+148:         <span class="ruby-value">1.0</span>,
+149:         <span class="ruby-value">1.0</span>,
+150:         <span class="ruby-value">0.6666666666666666</span>,
+151:         <span class="ruby-value">0.6666666666666666</span>,
+152:         <span class="ruby-value">0.6666666666666666</span>,
+153:         <span class="ruby-value">0.6</span>,
+154:         <span class="ruby-value">0.6</span>,
+155:         <span class="ruby-value">0.4</span>,
+156:         <span class="ruby-value">0.4</span>,
+157:         <span class="ruby-value">0.4</span>,
+158:       ]
+159:     <span class="ruby-ivar">@query_result</span>.<span class="ruby-identifier">eleven_point_precision</span>.<span class="ruby-identifier">each_with_index</span> <span class="ruby-keyword kw">do</span> <span class="ruby-operator">|</span><span class="ruby-identifier">p</span>, <span class="ruby-identifier">index</span><span class="ruby-operator">|</span>
+160:       <span class="ruby-identifier">assert_equal</span>(<span class="ruby-identifier">expected_results</span>[<span class="ruby-identifier">index</span>], <span class="ruby-identifier">p</span>[<span class="ruby-value">1</span>])
+161:     <span class="ruby-keyword kw">end</span>
+162:     
+163:   <span class="ruby-keyword kw">end</span></pre>
+					</div>
+					
+				</div>
+
+				
+
+				
+			</div>
+
+		
+			<div id="test-ranked-precision-method" class="method-detail ">
+				<a name="method-i-test_ranked_precision"></a>
+
+				<div class="method-heading">
+				
+					<span class="method-name">test_ranked_precision</span><span
+						class="method-args">()</span>
+					<span class="method-click-advice">click to toggle source</span>
+				
+				</div>
+
+				<div class="method-description">
+					
+					<p>
+Tests if the ranked recalls are calculated correctly
+</p>
+					
+
+					
+					<div class="method-source-code"
+						id="test-ranked-precision-source">
+<pre>
+     <span class="ruby-comment cmt"># File test/test_query_result.rb, line 94</span>
+ 94:   <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">test_ranked_precision</span>
+ 95:     
+ 96:     <span class="ruby-identifier">add_test_judgements</span>
+ 97:     <span class="ruby-identifier">add_ranked_query_result</span>
+ 98:     <span class="ruby-identifier">expected_precision</span> = [
+ 99:         <span class="ruby-value">1</span>,
+100:         <span class="ruby-value">1</span>,
+101:         <span class="ruby-value">0.6666666666666666</span>,
+102:         <span class="ruby-value">0.75</span>,
+103:         <span class="ruby-value">0.6</span>,
+104:         <span class="ruby-value">0.6666666666666666</span>,
+105:         <span class="ruby-value">0.5714285714285714</span>,
+106:         <span class="ruby-value">0.5</span>,
+107:         <span class="ruby-value">0.4444444444444444</span>,
+108:         <span class="ruby-value">0.4</span>
+109:       ]
+110:     <span class="ruby-ivar">@query_result</span>.<span class="ruby-identifier">statistics</span>.<span class="ruby-identifier">each_with_index</span> <span class="ruby-keyword kw">do</span> <span class="ruby-operator">|</span><span class="ruby-identifier">rank</span>, <span class="ruby-identifier">index</span><span class="ruby-operator">|</span>
+111:       <span class="ruby-identifier">assert_equal</span>(<span class="ruby-identifier">expected_precision</span>[<span class="ruby-identifier">index</span>], <span class="ruby-identifier">rank</span>[<span class="ruby-value">:precision</span>])
+112:     <span class="ruby-keyword kw">end</span>
+113:     
+114:   <span class="ruby-keyword kw">end</span></pre>
+					</div>
+					
+				</div>
+
+				
+
+				
+			</div>
+
+		
+			<div id="test-ranked-recall-method" class="method-detail ">
+				<a name="method-i-test_ranked_recall"></a>
+
+				<div class="method-heading">
+				
+					<span class="method-name">test_ranked_recall</span><span
+						class="method-args">()</span>
+					<span class="method-click-advice">click to toggle source</span>
+				
+				</div>
+
+				<div class="method-description">
+					
+					<p>
+Tests if the ranked recalls are calculated correctly
+</p>
+					
+
+					
+					<div class="method-source-code"
+						id="test-ranked-recall-source">
+<pre>
+     <span class="ruby-comment cmt"># File test/test_query_result.rb, line 117</span>
+117:   <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">test_ranked_recall</span>
+118:     
+119:     <span class="ruby-identifier">add_test_judgements</span>
+120:     <span class="ruby-identifier">add_ranked_query_result</span>
+121:     <span class="ruby-identifier">expected_recall</span> = [
+122:         <span class="ruby-value">0.25</span>,
+123:         <span class="ruby-value">0.5</span>,
+124:         <span class="ruby-value">0.5</span>,
+125:         <span class="ruby-value">0.75</span>,
+126:         <span class="ruby-value">0.75</span>,
+127:         <span class="ruby-value">1</span>,
+128:         <span class="ruby-value">1</span>,
+129:         <span class="ruby-value">1</span>,
+130:         <span class="ruby-value">1</span>,
+131:         <span class="ruby-value">1</span>
+132:       ]
+133:     <span class="ruby-ivar">@query_result</span>.<span class="ruby-identifier">statistics</span>.<span class="ruby-identifier">each_with_index</span> <span class="ruby-keyword kw">do</span> <span class="ruby-operator">|</span><span class="ruby-identifier">rank</span>, <span class="ruby-identifier">index</span><span class="ruby-operator">|</span>
+134:       <span class="ruby-identifier">assert_equal</span>(<span class="ruby-identifier">expected_recall</span>[<span class="ruby-identifier">index</span>], <span class="ruby-identifier">rank</span>[<span class="ruby-value">:recall</span>])
+135:     <span class="ruby-keyword kw">end</span>
+136:     
+137:   <span class="ruby-keyword kw">end</span></pre>
+					</div>
+					
+				</div>
+
+				
+
+				
+			</div>
+
+		
+			<div id="test-unranked-precision-method" class="method-detail ">
+				<a name="method-i-test_unranked_precision"></a>
+
+				<div class="method-heading">
+				
+					<span class="method-name">test_unranked_precision</span><span
+						class="method-args">()</span>
+					<span class="method-click-advice">click to toggle source</span>
+				
+				</div>
+
+				<div class="method-description">
+					
+					<p>
+Tests the unranked precision
+</p>
+					
+
+					
+					<div class="method-source-code"
+						id="test-unranked-precision-source">
+<pre>
+    <span class="ruby-comment cmt"># File test/test_query_result.rb, line 74</span>
+74:   <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">test_unranked_precision</span>
+75:     
+76:     <span class="ruby-identifier">add_test_judgements</span>
+77:     <span class="ruby-identifier">add_unranked_query_result</span>
+78:     <span class="ruby-identifier">assert_equal</span>(<span class="ruby-value">0.4</span>, <span class="ruby-ivar">@query_result</span>.<span class="ruby-identifier">statistics</span>[<span class="ruby-value">:precision</span>])
+79:     
+80:   <span class="ruby-keyword kw">end</span></pre>
+					</div>
+					
+				</div>
+
+				
+
+				
+			</div>
+
+		
+			<div id="test-unranked-recall-method" class="method-detail ">
+				<a name="method-i-test_unranked_recall"></a>
+
+				<div class="method-heading">
+				
+					<span class="method-name">test_unranked_recall</span><span
+						class="method-args">()</span>
+					<span class="method-click-advice">click to toggle source</span>
+				
+				</div>
+
+				<div class="method-description">
+					
+					<p>
+Tests if the unranked recall is calculated correctly
+</p>
+					
+
+					
+					<div class="method-source-code"
+						id="test-unranked-recall-source">
+<pre>
+    <span class="ruby-comment cmt"># File test/test_query_result.rb, line 84</span>
+84:   <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">test_unranked_recall</span>
+85: 
+86:     <span class="ruby-identifier">add_test_judgements</span>    
+87:     <span class="ruby-identifier">add_unranked_query_result</span>
+88:     <span class="ruby-identifier">assert_equal</span>(<span class="ruby-value">1.0</span>, <span class="ruby-ivar">@query_result</span>.<span class="ruby-identifier">statistics</span>[<span class="ruby-value">:recall</span>])
+89:     
+90:   <span class="ruby-keyword kw">end</span></pre>
+					</div>
+					
+				</div>
+
+				
+
+				
+			</div>
+
+		
+		</div>
+	
+
+	</div>
+
+
+	<div id="rdoc-debugging-section-dump" class="debugging-section">
+	
+		<p>Disabled; run with --debug to generate this.</p>
+	
+	</div>
+
+	<div id="validator-badges">
+		<p><small><a href="http://validator.w3.org/check/referer">[Validate]</a></small></p>
+		<p><small>Generated with the <a href="http://deveiate.org/projects/Darkfish-Rdoc/">Darkfish
+			Rdoc Generator</a> 1.1.6</small>.</p>
+	</div>
+
+</body>
+</html>
+

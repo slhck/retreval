@@ -1,7 +1,7 @@
 module Retreval
 
-  # A gold standard is composed of several judgements for the 
-  # cartesian product of documents and queries
+  # A Gold Standard is composed of several Judgements for the 
+  # cartesian product of Documents and Queries
   class GoldStandard
     
     attr_reader :documents, :judgements, :queries, :users
@@ -110,8 +110,8 @@ module Retreval
     end
     
     
-    # Adds a judgement (document, query, relevancy) to the gold standard.
-    # All of those are strings in the public interface.
+    # Adds a judgement (Document, Query, relevancy) to the GoldStandard.
+    # All of those are represented as strings in the public interface.
     # The user ID is an optional parameter that can be used to measure kappa later.
     # Call this with:
     #     add_judgement :document => doc_id, :query => query_string, :relevant => boolean, :user => John
@@ -136,7 +136,6 @@ module Retreval
         
         # If there is no judgement for this combination, just add the document/query pair
         if relevant.nil?
-          # TODO: improve efficiency by introducing hashes !
           @documents[document_id] = document
           @queries << query unless @queries.include?(query)
           return
@@ -155,8 +154,7 @@ module Retreval
         @queries << query unless @queries.include?(query)
         @judgements << judgement
       else
-        #TOOD I think there is somethink like an ArgumentExcpetion in Ruby; use that if applicable
-        raise "Need at least a Document, and a Query for creating the new entry."
+        raise ArgumentError.new("Need at least a Document, and a Query for creating the new entry.")
       end
       
     end
@@ -200,7 +198,6 @@ module Retreval
       document = Document.new :id => args[:document]
       
       #TODO: a hash could improve performance here as well
-      
       @judgements.each { |judgement| return true if judgement.document == document and judgement.query == query }
       
       false
@@ -240,7 +237,7 @@ module Retreval
     # See: http://nlp.stanford.edu/IR-book/html/htmledition/assessing-relevance-1.html
     def kappa
       
-      # FIXME: This isn't very pretty, maybe there's a more ruby-esque way to do this?
+      # TODO This isn't very pretty, maybe there's a more ruby-esque way to do this?
       sum = 0
       count = 0
       

@@ -230,9 +230,10 @@ module Retreval
       # Use the gold standard we initially received
       standard = @gold_standard
       
-      # If there is an unranked result to be calculated, we will 
+      # If there is an unranked result to be calculated ..
       if resultset.nil?
         unranked = true
+        # ... we'll just take the array of documents for this result
         resultset = OpenStruct.new
         resultset.documents = @documents.values
         resultset.query = @query
@@ -250,7 +251,9 @@ module Retreval
       
         # Get the document sets we are working on
         retrieved_documents = resultset.documents           # => This is an Array all the time
-        not_retrieved_documents = standard.documents.reject { |key, doc| retrieved_documents.include? doc } # => This is a Hash
+        # This means that we will filter out all retreived documents from the Gold Standard
+        # TODO: This can definitely be improved, but how?
+        not_retrieved_documents = standard.documents.reject { |key, doc| retrieved_documents.include? doc } # => This is a Hash as it refers to the Gold Standard
         
         # Check whether each of the retrieved documents is relevant or not ...
         retrieved_documents.each do |doc|

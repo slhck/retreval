@@ -2,4 +2,4 @@ TODO
 ====
 
 - Find a suitable plaintext format for retrieval results
-- Use Hashes instead of Arrays to store classes
+- Improve performance of some commands

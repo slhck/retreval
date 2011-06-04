@@ -21,15 +21,15 @@ If you want to see an example, use this command:
 INSTALLATION
 ============
 
+If you have RubyGems, just run
+
+    gem install retreval
+
 You can manually download the sources and build the Gem from there by `cd`ing to the folder where this README is saved and calling
 
     gem build retreval.gemspec
 
-This will create a file called `retreval` which you just have to install:
-
-    gem install retreval
-
-And you're done.
+This will create a gem file called which you just have to install with `gem install <file>` and you're done.
 
 
 HOWTO

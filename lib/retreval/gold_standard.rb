@@ -182,7 +182,7 @@ module Retreval
       end
       
       # If we didn't find any judgements, just leave it as false
-      if relevant_count == 0 and relevant_count == 0
+      if relevant_count == 0 and nonrelevant_count == 0
         false
       else
         relevant_count >= nonrelevant_count
